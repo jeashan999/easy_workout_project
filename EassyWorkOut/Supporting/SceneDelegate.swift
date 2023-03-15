@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else {return}
         let window = UIWindow(windowScene: windowScene)
         
-        let hc = HomeController()
+        let hc = LoginController()
         let nav = UINavigationController(rootViewController: hc)
         nav.modalPresentationStyle = .fullScreen
         
