@@ -2,7 +2,7 @@
 //  AuthHeaderView.swift
 //  EassyWorkOut
 //
-//  Created by neat lanka  on 2023-03-15.
+//  Created by jeashan anuja  on 2023-03-15.
 //
 
 import UIKit
@@ -19,7 +19,7 @@ class AuthHeaderView: UIView {
     
     private let labelTitle: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .label
+        lbl.textColor = .white
         lbl.textAlignment = .center
         lbl.font = .systemFont(ofSize: 26 , weight: .bold)
         lbl.text = "Error"
@@ -29,7 +29,7 @@ class AuthHeaderView: UIView {
     
     private let labelSubTitle: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .secondaryLabel
+        lbl.textColor = .white
         lbl.textAlignment = .center
         lbl.font = .systemFont(ofSize: 16 , weight: .regular)
         lbl.text = "Error"
@@ -62,7 +62,7 @@ class AuthHeaderView: UIView {
         
         
         NSLayoutConstraint.activate([
-            self.logoimageView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor , constant: 16),
+            self.logoimageView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor , constant: 30),
             self.logoimageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.logoimageView.widthAnchor.constraint(equalToConstant: 90),
             self.logoimageView.heightAnchor.constraint(equalTo: logoimageView.widthAnchor),

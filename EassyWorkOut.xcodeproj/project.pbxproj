@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */; };
+		A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497D929C363E100B87FF6 /* TextFeildCustom.swift */; };
+		A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497DB29C3934400B87FF6 /* CustomButton.swift */; };
+		A7FC2E3D29C5FB2D00043CE4 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */; };
+		A7FC2E4229C61DA000043CE4 /* gymVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A7FC2E3F29C61B7500043CE4 /* gymVideo.mp4 */; };
 		B37FE3A529BD93C900D0B50C /* ForgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37FE3A429BD93C900D0B50C /* ForgetController.swift */; };
 		B37FE3A729BD93ED00D0B50C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37FE3A629BD93ED00D0B50C /* LoginController.swift */; };
 		B37FE3A929BD944600D0B50C /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37FE3A829BD944600D0B50C /* RegisterController.swift */; };
@@ -40,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		A78497D929C363E100B87FF6 /* TextFeildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFeildCustom.swift; sourceTree = SOURCE_ROOT; };
+		A78497DB29C3934400B87FF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = SOURCE_ROOT; };
+		A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
+		A7FC2E3F29C61B7500043CE4 /* gymVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gymVideo.mp4; sourceTree = "<group>"; };
 		B37FE3A429BD93C900D0B50C /* ForgetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetController.swift; sourceTree = "<group>"; };
 		B37FE3A629BD93ED00D0B50C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B37FE3A829BD944600D0B50C /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -85,10 +93,11 @@
 		B37FE39829BD85F000D0B50C /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				B38DAE6B29BC74F1007B9072 /* Assets.xcassets */,
 				B38DAE6229BC74EC007B9072 /* AppDelegate.swift */,
 				B38DAE6429BC74EC007B9072 /* SceneDelegate.swift */,
-				B38DAE6B29BC74F1007B9072 /* Assets.xcassets */,
 				B38DAE6D29BC74F1007B9072 /* LaunchScreen.storyboard */,
+				A7FC2E3F29C61B7500043CE4 /* gymVideo.mp4 */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -97,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */,
+				A78497D929C363E100B87FF6 /* TextFeildCustom.swift */,
+				A78497DB29C3934400B87FF6 /* CustomButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +139,7 @@
 				B37FE3A429BD93C900D0B50C /* ForgetController.swift */,
 				B37FE3A629BD93ED00D0B50C /* LoginController.swift */,
 				B37FE3A829BD944600D0B50C /* RegisterController.swift */,
+				A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */,
 				B37FE3A129BD90EA00D0B50C /* Views */,
 				B37FE39829BD85F000D0B50C /* Supporting */,
 				B38DAE7029BC74F1007B9072 /* Info.plist */,
@@ -256,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FC2E4229C61DA000043CE4 /* gymVideo.mp4 in Resources */,
 				B38DAE6F29BC74F1007B9072 /* LaunchScreen.storyboard in Resources */,
 				B38DAE6C29BC74F1007B9072 /* Assets.xcassets in Resources */,
 			);
@@ -284,8 +297,11 @@
 			files = (
 				B37FE3A529BD93C900D0B50C /* ForgetController.swift in Sources */,
 				B37FE3A729BD93ED00D0B50C /* LoginController.swift in Sources */,
+				A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */,
 				B37FE3AB29BD946B00D0B50C /* HomeController.swift in Sources */,
+				A7FC2E3D29C5FB2D00043CE4 /* SplashScreenController.swift in Sources */,
 				B37FE3A929BD944600D0B50C /* RegisterController.swift in Sources */,
+				A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */,
 				B38DAE6329BC74EC007B9072 /* AppDelegate.swift in Sources */,
 				B38DAE6529BC74EC007B9072 /* SceneDelegate.swift in Sources */,
 				A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */,
