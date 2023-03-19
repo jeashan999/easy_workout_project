@@ -11,7 +11,7 @@ class RegisterController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = .systemCyan
         // Do any additional setup after loading the view.
     }
     

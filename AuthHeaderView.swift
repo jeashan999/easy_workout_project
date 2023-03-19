@@ -12,14 +12,14 @@ class AuthHeaderView: UIView {
     private let logoimageView: UIImageView = {
         let imgview = UIImageView()
         imgview.contentMode = .scaleAspectFit
-        imgview.image = UIImage(named: "logo")
+        imgview.image = UIImage(named: "logoNew")
         imgview.tintColor = .white
         return imgview
     }()
     
     private let labelTitle: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .white
+        lbl.textColor = .label
         lbl.textAlignment = .center
         lbl.font = .systemFont(ofSize: 26 , weight: .bold)
         lbl.text = "Error"
@@ -29,7 +29,7 @@ class AuthHeaderView: UIView {
     
     private let labelSubTitle: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = .white
+        lbl.textColor = .secondaryLabel
         lbl.textAlignment = .center
         lbl.font = .systemFont(ofSize: 16 , weight: .regular)
         lbl.text = "Error"
