@@ -8,22 +8,153 @@
 import UIKit
 
 class RegisterController: UIViewController {
+    private let headerview = AuthHeaderView(title: "Sign In", subTitle: "Login to your account")
+    private let usernameFeild = TextFeildCustom(feildType: .username )
+    private let passwordFeild = TextFeildCustom(feildType: .password )
+    
+    let datepicker = UIDatePicker()
+    
+    private let userLogin = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
+    private let userAccountCreate = CustomButton(title: "New User ? Create Account", fontSize: .med)
+    private let userPasswordForget = CustomButton(title: "Forget Password", fontSize: .small )
+//    var imageView: UIImageView = {
+//        let imageView = UIImageView(frame: .zero)
+//        imageView.image = UIImage(named: "background")
+//        imageView.contentMode = .scaleToFill
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        return imageView
+//    }()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemCyan
+        self.view.backgroundColor = .systemBackground
+        self.setupUI()
+        self.userLogin.addTarget(self, action: #selector(goToDashBoard), for: .touchUpInside)
+        self.userAccountCreate.addTarget(self, action: #selector(goToCreateAccount), for: .touchUpInside)
+        self.userPasswordForget.addTarget(self, action: #selector(goToForgetPassword), for: .touchUpInside)
+        createDatePicker()
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+        
     }
-    */
+    func createDatePicker(){
+        // tool bar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        // date picker mode
+        self.datepicker.datePickerMode = .date
+        self.datepicker.preferredDatePickerStyle = .wheels
+        // bar done button
+        let bardonebtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(gotoDoneBtn))
+        toolbar.setItems([bardonebtn], animated: true)
+        // assgin toolbar
+        usernameFeild.inputAccessoryView = toolbar
+        usernameFeild.inputView = datepicker
+        usernameFeild.textAlignment = .center
+    }
+
+    private func setupUI() {
+        
+        self.view.addSubview(headerview)
+        self.view.addSubview(usernameFeild)
+        self.view.addSubview(passwordFeild)
+        self.view.addSubview(userLogin)
+        self.view.addSubview(userAccountCreate)
+        self.view.addSubview(userPasswordForget)
+        
+        
+        
+        headerview.translatesAutoresizingMaskIntoConstraints = false
+        usernameFeild.translatesAutoresizingMaskIntoConstraints = false
+        passwordFeild.translatesAutoresizingMaskIntoConstraints = false
+      
+        userLogin.translatesAutoresizingMaskIntoConstraints = false
+        userAccountCreate.translatesAutoresizingMaskIntoConstraints = false
+        userPasswordForget.translatesAutoresizingMaskIntoConstraints = false
+        
+//        view.insertSubview(imageView, at: 0)
+        
+        NSLayoutConstraint.activate([
+//            imageView.topAnchor.constraint(equalTo: view.topAnchor),
+//            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            self.headerview.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
+            self.headerview.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.headerview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            self.headerview.heightAnchor.constraint(equalToConstant: 222),
+           
+            self.usernameFeild.topAnchor.constraint(equalTo: headerview.bottomAnchor, constant:  12),
+            self.usernameFeild.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.usernameFeild.heightAnchor.constraint(equalToConstant: 55),
+            self.usernameFeild.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+
+            
+            self.passwordFeild.topAnchor.constraint(equalTo: usernameFeild.bottomAnchor, constant:  22),
+            self.passwordFeild.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.passwordFeild.heightAnchor.constraint(equalToConstant: 55),
+            self.passwordFeild.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+            self.userLogin.topAnchor.constraint(equalTo: passwordFeild.bottomAnchor, constant:  22),
+            self.userLogin.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.userLogin.heightAnchor.constraint(equalToConstant: 55),
+            self.userLogin.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+            self.userAccountCreate.topAnchor.constraint(equalTo: userLogin.bottomAnchor, constant:  11),
+            self.userAccountCreate.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.userAccountCreate.heightAnchor.constraint(equalToConstant: 44),
+            self.userAccountCreate.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+            self.userPasswordForget.topAnchor.constraint(equalTo: userAccountCreate.bottomAnchor, constant:  6),
+            self.userPasswordForget.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.userPasswordForget.heightAnchor.constraint(equalToConstant: 44),
+            self.userPasswordForget.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+ ])
+        
+        
+    }
+    
+    // Selectors
+    @objc private func goToDashBoard(){
+        print("goToDashBoard")
+        let vc = HomeController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false , completion: nil)
+    }
+    @objc private func goToCreateAccount(){
+        print("goToCreateAccount")
+        let vc = RegisterController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @objc private func goToForgetPassword(){
+        print("goToForgetPassword")
+        let vc = ForgetController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @objc private func gotoDoneBtn(){
+        let dateFormater = DateFormatter()
+        dateFormater.dateStyle = .medium
+        dateFormater.timeStyle = .none
+        dateFormater.dateFormat = "MM/dd/yyyy"
+        usernameFeild.text = dateFormater.string(from: datepicker.date)
+        let date = dateFormater.string(from: datepicker.date)
+        let dateOfBirth = dateFormater.date(from: date)
+
+           let calender = Calendar.current
+
+           let dateComponent = calender.dateComponents([.year, .month, .day], from:
+           dateOfBirth!, to: Date())
+        
+        print(dateComponent.year!)
+        self.view.endEditing(true)
+    }
 
 }

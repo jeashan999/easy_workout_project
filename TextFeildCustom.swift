@@ -12,6 +12,7 @@ class TextFeildCustom: UITextField {
     enum TextCustomFeildTypes {
         
         case username
+        case dateOfbirth
         case email
         case password
     }
@@ -35,6 +36,8 @@ class TextFeildCustom: UITextField {
             
         case .username:
             self.placeholder = "Username"
+        case .dateOfbirth:
+            self.placeholder = "Date of birth"
         case .email:
             self.placeholder = "Email Address"
             self.keyboardType = .emailAddress
