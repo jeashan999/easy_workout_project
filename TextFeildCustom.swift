@@ -11,10 +11,14 @@ class TextFeildCustom: UITextField {
 
     enum TextCustomFeildTypes {
         
-        case username
+        case userFname
+        case userLname
         case dateOfbirth
         case email
         case password
+        case age
+        case height
+        case weight
     }
 
     private let authFeildType: TextCustomFeildTypes
@@ -34,10 +38,18 @@ class TextFeildCustom: UITextField {
         
         switch feildType {
             
-        case .username:
-            self.placeholder = "Username"
+        case .userFname:
+            self.placeholder = "First Name"
+        case .userLname:
+            self.placeholder = "Last Name"
         case .dateOfbirth:
             self.placeholder = "Date of birth"
+        case .age:
+            self.placeholder = "Age"
+        case .height:
+            self.placeholder = "Height"
+        case .weight:
+            self.placeholder = "Weight"
         case .email:
             self.placeholder = "Email Address"
             self.keyboardType = .emailAddress
@@ -47,6 +59,8 @@ class TextFeildCustom: UITextField {
             self.placeholder = "Password"
             self.textContentType = .oneTimeCode
             self.isSecureTextEntry =  true
+        
+        
         }
         
     }
