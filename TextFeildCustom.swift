@@ -13,6 +13,7 @@ class TextFeildCustom: UITextField {
         
         case userFname
         case userLname
+        case Name
         case dateOfbirth
         case email
         case password
@@ -40,16 +41,20 @@ class TextFeildCustom: UITextField {
             
         case .userFname:
             self.placeholder = "First Name"
+        case .Name:
+            self.placeholder = "Your Name"
         case .userLname:
             self.placeholder = "Last Name"
         case .dateOfbirth:
             self.placeholder = "Date of birth"
         case .age:
             self.placeholder = "Age"
+            self.isEnabled   = false
+            self.isHidden = true
         case .height:
-            self.placeholder = "Height"
+            self.placeholder = "Height (Kg)"
         case .weight:
-            self.placeholder = "Weight"
+            self.placeholder = "Weight (cm)"
         case .email:
             self.placeholder = "Email Address"
             self.keyboardType = .emailAddress

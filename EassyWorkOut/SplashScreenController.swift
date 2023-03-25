@@ -18,7 +18,7 @@ class SplashScreenController: UIViewController {
         playVideo()
         getstartButton.addTarget(self, action: #selector(gotnextPage), for: .touchUpInside)
         // Do any additional setup after loading the view.
-        gameTimer = Timer.scheduledTimer(timeInterval: 8, target: self, selector: #selector(gotnextPage), userInfo: nil, repeats: false)
+        gameTimer = Timer.scheduledTimer(timeInterval: 9, target: self, selector: #selector(gotnextPage), userInfo: nil, repeats: false)
     }
     
     @objc func gotnextPage() {
@@ -46,18 +46,19 @@ class SplashScreenController: UIViewController {
         name.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
         name.layer.shadowOpacity = 1.0
         name.layer.shadowRadius = 1.0
+        name.setRoundedImage()
+        
 
         return name
     }()
     
     let getstartButton : UIButton = {
         
-                let button = UIButton()
+        let button = UIButton()
                
-                 button.setTitle("Get Started Now", for: .normal)
-                button.titleLabel?.font = UIFont(name: "SF Compact", size: 20)
-                button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-
+        button.setTitle("Get Started Now", for: .normal)
+        button.titleLabel?.font = UIFont(name: "SF Compact", size: 20)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.translatesAutoresizingMaskIntoConstraints = false
 
     
@@ -83,7 +84,7 @@ class SplashScreenController: UIViewController {
 //            self.splashScreenLogo()
 //        }
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5){
+        DispatchQueue.main.asyncAfter(deadline: .now()+1.0){
             self.splashScreenNameLogo()
         }
         
@@ -131,10 +132,10 @@ class SplashScreenController: UIViewController {
         animation.beginTime = CACurrentMediaTime()
         self.view.addSubview(getstartButton)
         getstartButton.layer.add(animation, forKey: nil)
-        
+
         setupSplashScreenButtonConstraints()
     }
-    
+
     @objc func playerItemDidReachEnd(){
         player!.seek(to: CMTime.zero)
     }
@@ -156,9 +157,9 @@ class SplashScreenController: UIViewController {
         logonameImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
     }
 
-    
+
     func setupSplashScreenButtonConstraints(){
-        
+
         getstartButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 550).isActive = true
         getstartButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150 ).isActive = true
         getstartButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true

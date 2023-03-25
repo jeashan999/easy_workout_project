@@ -31,7 +31,7 @@ class AuthHeaderView: UIView {
         let lbl = UILabel()
         lbl.textColor = .secondaryLabel
         lbl.textAlignment = .center
-        lbl.font = .systemFont(ofSize: 16 , weight: .regular)
+        lbl.font = .systemFont(ofSize: 20 , weight: .bold)
         lbl.text = "Error"
          return lbl
         
@@ -62,12 +62,12 @@ class AuthHeaderView: UIView {
         
         
         NSLayoutConstraint.activate([
-            self.logoimageView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor , constant: 30),
+            self.logoimageView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor , constant: 20),
             self.logoimageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.logoimageView.widthAnchor.constraint(equalToConstant: 90),
             self.logoimageView.heightAnchor.constraint(equalTo: logoimageView.widthAnchor),
             
-            self.labelTitle.topAnchor.constraint(equalTo: logoimageView.bottomAnchor, constant: 19),
+            self.labelTitle.topAnchor.constraint(equalTo: logoimageView.bottomAnchor, constant: 15),
             self.labelTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.labelTitle.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             

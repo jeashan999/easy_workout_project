@@ -8,17 +8,22 @@
 import UIKit
 
 class RegisterController: UIViewController {
-    private let headerview = AuthHeaderView(title: "Sign In", subTitle: "Login to your account")
-    private let userFnameFeild = TextFeildCustom(feildType: .userFname )
+    private let headerview = AuthHeaderView(title: "Sign Up", subTitle: "It's quick and easy.")
+    private let Name = TextFeildCustom(feildType: .Name )
+    private let useremail = TextFeildCustom(feildType: .email )
+    private let userHeight = TextFeildCustom(feildType: .height )
+    private let userWeight = TextFeildCustom(feildType: .weight )
     private let passwordFeild = TextFeildCustom(feildType: .password )
     private let dateOfBirth = TextFeildCustom(feildType: .dateOfbirth )
     private let age = TextFeildCustom(feildType: .age )
     
     let datepicker = UIDatePicker()
     
-    private let userLogin = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
-    private let userAccountCreate = CustomButton(title: "New User ? Create Account", fontSize: .med)
+    private let userSignUp = CustomButton(title: "Sign Up", hasBackground: true, fontSize: .big)
+    private let userLogin = CustomButton(title: "Already have a account ? Login", fontSize: .med)
     private let userPasswordForget = CustomButton(title: "Forget Password", fontSize: .small )
+    
+    private let scrollView = UIScrollView()
 //    var imageView: UIImageView = {
 //        let imageView = UIImageView(frame: .zero)
 //        imageView.image = UIImage(named: "background")
@@ -32,8 +37,8 @@ class RegisterController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
         self.setupUI()
-        self.userLogin.addTarget(self, action: #selector(goToDashBoard), for: .touchUpInside)
-        self.userAccountCreate.addTarget(self, action: #selector(goToCreateAccount), for: .touchUpInside)
+        self.userSignUp.addTarget(self, action: #selector(goToDashBoard), for: .touchUpInside)
+        self.userLogin.addTarget(self, action: #selector(goToLogin), for: .touchUpInside)
         self.userPasswordForget.addTarget(self, action: #selector(goToForgetPassword), for: .touchUpInside)
         createDatePicker()
         // Do any additional setup after loading the view.
@@ -59,29 +64,35 @@ class RegisterController: UIViewController {
         dateOfBirth.inputView = datepicker
         dateOfBirth.textAlignment = .left
     }
+    
 
     private func setupUI() {
         
         self.view.addSubview(headerview)
-        self.view.addSubview(userFnameFeild)
+        self.view.addSubview(Name)
         self.view.addSubview(dateOfBirth)
+        self.view.addSubview(userHeight)
+        self.view.addSubview(userWeight)
+        self.view.addSubview(useremail)
         self.view.addSubview(age)
         self.view.addSubview(passwordFeild)
         self.view.addSubview(userLogin)
-        self.view.addSubview(userAccountCreate)
+        self.view.addSubview(userSignUp)
         self.view.addSubview(userPasswordForget)
         
         
         
         headerview.translatesAutoresizingMaskIntoConstraints = false
-        userFnameFeild.translatesAutoresizingMaskIntoConstraints = false
+        Name.translatesAutoresizingMaskIntoConstraints = false
         dateOfBirth.translatesAutoresizingMaskIntoConstraints = false
+        userHeight.translatesAutoresizingMaskIntoConstraints = false
+        userWeight.translatesAutoresizingMaskIntoConstraints = false
         age.translatesAutoresizingMaskIntoConstraints = false
+        useremail.translatesAutoresizingMaskIntoConstraints = false
         passwordFeild.translatesAutoresizingMaskIntoConstraints = false
       
         userLogin.translatesAutoresizingMaskIntoConstraints = false
-        userAccountCreate.translatesAutoresizingMaskIntoConstraints = false
-        userPasswordForget.translatesAutoresizingMaskIntoConstraints = false
+        userSignUp.translatesAutoresizingMaskIntoConstraints = false
         
 //        view.insertSubview(imageView, at: 0)
         
@@ -94,44 +105,50 @@ class RegisterController: UIViewController {
             self.headerview.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
             self.headerview.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.headerview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            self.headerview.heightAnchor.constraint(equalToConstant: 222),
+            self.headerview.heightAnchor.constraint(equalToConstant: 220),
            
-            self.userFnameFeild.topAnchor.constraint(equalTo: headerview.bottomAnchor, constant:  12),
-            self.userFnameFeild.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.userFnameFeild.heightAnchor.constraint(equalToConstant: 55),
-            self.userFnameFeild.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-            
-            self.dateOfBirth.topAnchor.constraint(equalTo: userFnameFeild.bottomAnchor, constant:  12),
+            self.Name.topAnchor.constraint(equalTo: headerview.bottomAnchor, constant:  10),
+            self.Name.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.Name.heightAnchor.constraint(equalToConstant: 40),
+            self.Name.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+     
+            self.dateOfBirth.topAnchor.constraint(equalTo: Name.bottomAnchor, constant:  10),
             self.dateOfBirth.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.dateOfBirth.heightAnchor.constraint(equalToConstant: 55),
+            self.dateOfBirth.heightAnchor.constraint(equalToConstant: 40),
             self.dateOfBirth.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.age.topAnchor.constraint(equalTo: dateOfBirth.bottomAnchor, constant:  22),
-            self.age.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.age.heightAnchor.constraint(equalToConstant: 55),
-            self.age.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            self.userHeight.topAnchor.constraint(equalTo: dateOfBirth.bottomAnchor, constant:  10),
+            self.userHeight.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.userHeight.heightAnchor.constraint(equalToConstant: 40),
+            self.userHeight.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.passwordFeild.topAnchor.constraint(equalTo: age.bottomAnchor, constant:  22),
+            self.userWeight.topAnchor.constraint(equalTo: userHeight.bottomAnchor, constant:  10),
+            self.userWeight.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.userWeight.heightAnchor.constraint(equalToConstant: 40),
+            self.userWeight.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+            self.useremail.topAnchor.constraint(equalTo: userWeight.bottomAnchor, constant:  25),
+            self.useremail.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.useremail.heightAnchor.constraint(equalToConstant: 40),
+            self.useremail.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+            self.passwordFeild.topAnchor.constraint(equalTo: useremail.bottomAnchor, constant:  12),
             self.passwordFeild.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.passwordFeild.heightAnchor.constraint(equalToConstant: 55),
+            self.passwordFeild.heightAnchor.constraint(equalToConstant: 40),
             self.passwordFeild.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-            
          
             
-            self.userLogin.topAnchor.constraint(equalTo: passwordFeild.bottomAnchor, constant:  22),
+            self.userSignUp.topAnchor.constraint(equalTo: passwordFeild.bottomAnchor, constant:  22),
+            self.userSignUp.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.userSignUp.heightAnchor.constraint(equalToConstant: 40),
+            self.userSignUp.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            
+            self.userLogin.topAnchor.constraint(equalTo: userSignUp.bottomAnchor, constant: 10),
             self.userLogin.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.userLogin.heightAnchor.constraint(equalToConstant: 55),
+            self.userLogin.heightAnchor.constraint(equalToConstant: 30),
             self.userLogin.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.userAccountCreate.topAnchor.constraint(equalTo: userLogin.bottomAnchor, constant:  11),
-            self.userAccountCreate.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.userAccountCreate.heightAnchor.constraint(equalToConstant: 44),
-            self.userAccountCreate.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-            
-            self.userPasswordForget.topAnchor.constraint(equalTo: userAccountCreate.bottomAnchor, constant:  6),
-            self.userPasswordForget.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.userPasswordForget.heightAnchor.constraint(equalToConstant: 44),
-            self.userPasswordForget.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+
             
  ])
         
@@ -145,9 +162,9 @@ class RegisterController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false , completion: nil)
     }
-    @objc private func goToCreateAccount(){
-        print("goToCreateAccount")
-        let vc = RegisterController()
+    @objc private func goToLogin(){
+        print("goToLogin")
+        let vc = LoginController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @objc private func goToForgetPassword(){
@@ -168,8 +185,9 @@ class RegisterController: UIViewController {
 
            let dateComponent = calender.dateComponents([.year, .month, .day], from:
            dateOfBirth!, to: Date())
-        
-//      age.inputView = dateComponent!
+        let x = dateComponent.year!
+        let str = String(x)
+        age.text = str+" "+"y"
         self.view.endEditing(true)
     }
 

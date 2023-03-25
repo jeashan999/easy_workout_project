@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else {return}
         let window = UIWindow(windowScene: windowScene)
         
-        let hc = SplashScreenController()
+        let hc = NewSplashScreenController()
         let nav = UINavigationController(rootViewController: hc)
         nav.modalPresentationStyle = .fullScreen
         
