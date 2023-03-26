@@ -17,7 +17,7 @@ class LoginController: UIViewController {
     private let userLogin = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
     private let userAccountCreate = CustomButton(title: "New to EasyWorkout? Create an account.", fontSize: .small)
     private let userPasswordForget = CustomButton(title: "Forget Password?", fontSize: .small )
-    private let userPrivacyPolicy = CustomButton(title: "Privacy & Policy",fontSize: .med )
+    private let userPrivacyPolicy = CustomButton(title: "Privacy & Policy",fontSize: .small )
 //    var imageView: UIImageView = {
 //        let imageView = UIImageView(frame: .zero)
 //        imageView.image = UIImage(named: "background")
@@ -25,6 +25,7 @@ class LoginController: UIViewController {
 //        imageView.translatesAutoresizingMaskIntoConstraints = false
 //        return imageView
 //    }()
+    let cardView = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
@@ -32,7 +33,15 @@ class LoginController: UIViewController {
         self.userLogin.addTarget(self, action: #selector(goToDashBoard), for: .touchUpInside)
         self.userAccountCreate.addTarget(self, action: #selector(goToCreateAccount), for: .touchUpInside)
         self.userPasswordForget.addTarget(self, action: #selector(goToForgetPassword), for: .touchUpInside)
-        self.userPrivacyPolicy.addTarget(self, action: #selector(goToPrivacy), for: .touchUpInside)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(goToPrivacy))
+        self.cardView.addGestureRecognizer(tapGesture)
+        
+                cardView.backgroundColor = .secondarySystemBackground
+                cardView.layer.cornerRadius = 10
+                cardView.layer.shadowOffset = CGSize(width: 0, height: 4)
+                cardView.layer.shadowOpacity = 0.5
+                cardView.layer.shadowRadius = 4
+               cardView.layer.opacity = 0.2
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +59,7 @@ class LoginController: UIViewController {
         self.view.addSubview(userAccountCreate)
         self.view.addSubview(userPasswordForget)
         self.view.addSubview(userPrivacyPolicy)
+        self.view.addSubview(cardView)
         
         
         
@@ -61,6 +71,7 @@ class LoginController: UIViewController {
         userAccountCreate.translatesAutoresizingMaskIntoConstraints = false
         userPasswordForget.translatesAutoresizingMaskIntoConstraints = false
         userPrivacyPolicy.translatesAutoresizingMaskIntoConstraints = false
+        cardView.translatesAutoresizingMaskIntoConstraints = false
         
 //        view.insertSubview(imageView, at: 0)
         
@@ -100,9 +111,25 @@ class LoginController: UIViewController {
             self.userPasswordForget.heightAnchor.constraint(equalToConstant: 20),
             self.userPasswordForget.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             
-            self.userPrivacyPolicy.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            self.userPrivacyPolicy.trailingAnchor.constraint(equalTo: userPrivacyPolicy.trailingAnchor, constant: -20),
-            self.userPrivacyPolicy.centerYAnchor.constraint(equalTo: userPrivacyPolicy.centerYAnchor)
+//            self.userPrivacyPolicy.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+//            self.userPrivacyPolicy.trailingAnchor.constraint(equalTo: userPrivacyPolicy.trailingAnchor, constant: -20),
+//            self.userPrivacyPolicy.centerYAnchor.constraint(equalTo: userPrivacyPolicy.centerYAnchor)
+            self.cardView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            self.cardView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            self.cardView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.cardView.heightAnchor.constraint(equalToConstant: 50),
+            
+//            self.userPrivacyPolicy.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+//            self.userPrivacyPolicy.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+//            self.userPrivacyPolicy.bottomAnchor.constraint(equalTo: cardView.topAnchor, constant: -16),
+//            self.userPrivacyPolicy.centerYAnchor.constraint(equalTo: userPrivacyPolicy.centerYAnchor)
+            
+            self.userPrivacyPolicy.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
+            self.userPrivacyPolicy.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16),
+            self.userPrivacyPolicy.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -16),
+            self.userPrivacyPolicy.heightAnchor.constraint(equalToConstant: 30)
+            
+            
             
  ])
         

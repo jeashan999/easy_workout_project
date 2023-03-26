@@ -34,8 +34,9 @@ class WebViewerController: UIViewController , WKNavigationDelegate {
         // Add a custom "Done" button to dismiss the view controller
         let doneButton = UIButton(type: .system)
         doneButton.setTitle("Done", for: .normal)
-        doneButton.backgroundColor = .secondarySystemBackground
-        doneButton.layer.cornerRadius = 8
+        doneButton.backgroundColor = .systemBlue
+        doneButton.layer.cornerRadius = 6
+        doneButton.setTitleColor(.white, for: .normal)
         doneButton.addTarget(self, action: #selector(dismissViewController), for: .touchUpInside)
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(doneButton)
