@@ -38,7 +38,7 @@ class LoginController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-//        self.goToCreateAccount()
+
     }
 
     private func setupUI() {
@@ -79,8 +79,6 @@ class LoginController: UIViewController {
             self.usernameFeild.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
             self.usernameFeild.heightAnchor.constraint(equalToConstant: 55),
             self.usernameFeild.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-            
-
             
             self.passwordFeild.topAnchor.constraint(equalTo: usernameFeild.bottomAnchor, constant:  22),
             self.passwordFeild.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
