@@ -15,9 +15,9 @@ class LoginController: UIViewController {
     private let passwordFeild = TextFeildCustom(feildType: .password )
     
     private let userLogin = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
-    private let userAccountCreate = CustomButton(title: "New to EasyWorkout? Create an account.", fontSize: .small)
-    private let userPasswordForget = CustomButton(title: "Forget Password?", fontSize: .small )
-    private let userPrivacyPolicy = CustomButton(title: "Privacy & Policy",fontSize: .small )
+    private let userAccountCreate = CustomButton(title: "New to EasyWorkout? Create an account.", fontSize: .med)
+    private let userPasswordForget = CustomButton(title: "Forget Password?", fontSize: .med )
+    private let userPrivacyPolicy = CustomButton(title: "Privacy & Policy",fontSize: .med )
 //    var imageView: UIImageView = {
 //        let imageView = UIImageView(frame: .zero)
 //        imageView.image = UIImage(named: "background")
@@ -140,8 +140,9 @@ class LoginController: UIViewController {
     @objc private func goToDashBoard(){
         print("goToDashBoard")
         let vc = HomeController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: false , completion: nil)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: false , completion: nil)
     }
     @objc private func goToCreateAccount(){
         print("goToCreateAccount")

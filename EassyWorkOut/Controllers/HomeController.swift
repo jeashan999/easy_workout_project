@@ -10,13 +10,22 @@ import UIKit
 class HomeController: UIViewController {
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-    private let label = UILabel()
+    private let label : UILabel = {
+        let label = UILabel()
+        label.textColor = .label
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 24 , weight: .semibold)
+        
+        
+        return label
+    }()
     private var isScrollEnabled = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didtapLogout))
         view.addSubview(scrollView)
         
         NSLayoutConstraint.activate([
@@ -81,5 +90,8 @@ class HomeController: UIViewController {
     
     @objc func disableScroll(_ sender: UIKeyCommand) {
         isScrollEnabled = false
+    }
+    @objc private func didtapLogout(){
+ 
     }
 }

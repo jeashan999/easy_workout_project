@@ -10,6 +10,7 @@
 		A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */; };
 		A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497D929C363E100B87FF6 /* TextFeildCustom.swift */; };
 		A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497DB29C3934400B87FF6 /* CustomButton.swift */; };
+		A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7889F3329D94C8000EB7418 /* AlertManager.swift */; };
 		A79E158C29CF487E00E33679 /* NewSplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */; };
 		A7BA6A4129D0188C009443F6 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA6A4029D0188C009443F6 /* WebViewerController.swift */; };
 		A7FC2E3D29C5FB2D00043CE4 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */; };
@@ -48,6 +49,7 @@
 		A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		A78497D929C363E100B87FF6 /* TextFeildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFeildCustom.swift; sourceTree = SOURCE_ROOT; };
 		A78497DB29C3934400B87FF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = SOURCE_ROOT; };
+		A7889F3329D94C8000EB7418 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSplashScreenController.swift; sourceTree = "<group>"; };
 		A7BA6A4029D0188C009443F6 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
 		A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7889F3229D9481000EB7418 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B37FE3AA29BD946B00D0B50C /* HomeController.swift */,
+				B37FE3A429BD93C900D0B50C /* ForgetController.swift */,
+				B37FE3A629BD93ED00D0B50C /* LoginController.swift */,
+				B37FE3A829BD944600D0B50C /* RegisterController.swift */,
+				A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */,
+				A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */,
+				A7BA6A4029D0188C009443F6 /* WebViewerController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B37FE39829BD85F000D0B50C /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,16 +155,11 @@
 		B38DAE6129BC74EC007B9072 /* EassyWorkOut */ = {
 			isa = PBXGroup;
 			children = (
-				B37FE3AA29BD946B00D0B50C /* HomeController.swift */,
-				B37FE3A429BD93C900D0B50C /* ForgetController.swift */,
-				B37FE3A629BD93ED00D0B50C /* LoginController.swift */,
-				B37FE3A829BD944600D0B50C /* RegisterController.swift */,
-				A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */,
-				A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */,
-				A7BA6A4029D0188C009443F6 /* WebViewerController.swift */,
+				A7889F3229D9481000EB7418 /* Controllers */,
 				B37FE3A129BD90EA00D0B50C /* Views */,
 				B37FE39829BD85F000D0B50C /* Supporting */,
 				B38DAE7029BC74F1007B9072 /* Info.plist */,
+				A7889F3329D94C8000EB7418 /* AlertManager.swift */,
 			);
 			path = EassyWorkOut;
 			sourceTree = "<group>";
@@ -306,6 +317,7 @@
 				B37FE3A729BD93ED00D0B50C /* LoginController.swift in Sources */,
 				A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */,
 				A7BA6A4129D0188C009443F6 /* WebViewerController.swift in Sources */,
+				A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */,
 				B37FE3AB29BD946B00D0B50C /* HomeController.swift in Sources */,
 				A7FC2E3D29C5FB2D00043CE4 /* SplashScreenController.swift in Sources */,
 				B37FE3A929BD944600D0B50C /* RegisterController.swift in Sources */,

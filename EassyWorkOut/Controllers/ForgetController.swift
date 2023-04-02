@@ -16,7 +16,7 @@ class ForgetController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-
+        self.resetPasswordBtn.addTarget(self, action: #selector(goToRestPassword), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
     
@@ -62,6 +62,11 @@ class ForgetController: UIViewController {
         ])
         
         
+    }
+    // Selectors
+    @objc private func goToRestPassword(){
+        print("goToRestPassword")
+        guard let email =  self.emailFeild.text , !email.isEmpty else{return}
     }
 
 }

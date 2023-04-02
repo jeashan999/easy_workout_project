@@ -164,7 +164,7 @@ class RegisterController: UIViewController {
     }
     @objc private func goToLogin(){
         print("goToLogin")
-        let vc = LoginController()
+//        let vc = LoginController()
 //        self.navigationController?.pushViewController(vc, animated: true)
         self.navigationController?.popViewController(animated: true)
     }
