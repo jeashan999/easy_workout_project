@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */; };
+		A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */; };
 		A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497D929C363E100B87FF6 /* TextFeildCustom.swift */; };
 		A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497DB29C3934400B87FF6 /* CustomButton.swift */; };
 		A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7889F3329D94C8000EB7418 /* AlertManager.swift */; };
+		A789EFF62A062F4500BBC9F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A789EFF52A062F4500BBC9F2 /* GoogleService-Info.plist */; };
 		A79E158C29CF487E00E33679 /* NewSplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */; };
 		A7BA6A4129D0188C009443F6 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA6A4029D0188C009443F6 /* WebViewerController.swift */; };
 		A7FC2E3D29C5FB2D00043CE4 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */; };
@@ -47,9 +49,11 @@
 
 /* Begin PBXFileReference section */
 		A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsViewController.swift; sourceTree = "<group>"; };
 		A78497D929C363E100B87FF6 /* TextFeildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFeildCustom.swift; sourceTree = SOURCE_ROOT; };
 		A78497DB29C3934400B87FF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = SOURCE_ROOT; };
 		A7889F3329D94C8000EB7418 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		A789EFF52A062F4500BBC9F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSplashScreenController.swift; sourceTree = "<group>"; };
 		A7BA6A4029D0188C009443F6 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
 		A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */,
 				A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */,
 				A7BA6A4029D0188C009443F6 /* WebViewerController.swift */,
+				A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				B38DAE6429BC74EC007B9072 /* SceneDelegate.swift */,
 				B38DAE6D29BC74F1007B9072 /* LaunchScreen.storyboard */,
 				A7FC2E3F29C61B7500043CE4 /* gymVideo.mp4 */,
+				A789EFF52A062F4500BBC9F2 /* GoogleService-Info.plist */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FC2E4229C61DA000043CE4 /* gymVideo.mp4 in Resources */,
+				A789EFF62A062F4500BBC9F2 /* GoogleService-Info.plist in Resources */,
 				B38DAE6F29BC74F1007B9072 /* LaunchScreen.storyboard in Resources */,
 				B38DAE6C29BC74F1007B9072 /* Assets.xcassets in Resources */,
 			);
@@ -323,6 +330,7 @@
 				B37FE3A929BD944600D0B50C /* RegisterController.swift in Sources */,
 				A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */,
 				B38DAE6329BC74EC007B9072 /* AppDelegate.swift in Sources */,
+				A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */,
 				B38DAE6529BC74EC007B9072 /* SceneDelegate.swift in Sources */,
 				A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */,
 			);
@@ -495,11 +503,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EassyWorkOut/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Easy Workout";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,11 +531,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EassyWorkOut/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Easy Workout";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

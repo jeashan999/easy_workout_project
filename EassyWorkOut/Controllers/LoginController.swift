@@ -15,7 +15,7 @@ class LoginController: UIViewController {
     private let passwordFeild = TextFeildCustom(feildType: .password )
     
     private let userLogin = CustomButton(title: "Sign In", hasBackground: true, fontSize: .big)
-    private let userAccountCreate = CustomButton(title: "New to EasyWorkout? Create an account.", fontSize: .med)
+    private let userAccountCreate = CustomButton(title: "New User? Create an account.", fontSize: .med)
     private let userPasswordForget = CustomButton(title: "Forget Password?", fontSize: .med )
     private let userPrivacyPolicy = CustomButton(title: "Privacy & Policy",fontSize: .med )
 //    var imageView: UIImageView = {

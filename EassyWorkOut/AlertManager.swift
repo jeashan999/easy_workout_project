@@ -42,3 +42,26 @@ extension AlertManager {
     }
   
 }
+extension AlertManager {
+   
+    public static func showPasswordRestAlert(on vc:UIViewController  , with error:Error){
+        self.showAlertBasic(on: vc, titile: "Password Reset Sent", message: nil)
+    }
+    
+    public static func showPasswordRestSendingErrorsAlert(on vc:UIViewController , with error:Error){
+        self.showAlertBasic(on: vc, titile: "Error Sending Password Reset", message: "\(error.localizedDescription)")
+    }
+  
+}
+
+extension AlertManager {
+   
+    public static func shownFetchingUserErrorsAlert(on vc:UIViewController , with error:Error){
+        self.showAlertBasic(on: vc, titile: "Error Fetching User", message: "\(error.localizedDescription)")
+    }
+    
+    public static func showUnkownFetchingUserErrorsAlert(on vc:UIViewController , with error:Error){
+        self.showAlertBasic(on: vc, titile: "Unknown Error Fetching User", message: nil)
+    }
+  
+}
