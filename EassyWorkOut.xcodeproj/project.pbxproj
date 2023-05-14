@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */; };
 		A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */; };
+		A77481372A0C0A0400ED3238 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481362A0C0A0400ED3238 /* MenuViewController.swift */; };
+		A77481392A10B74500ED3238 /* MainTabVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481382A10B74500ED3238 /* MainTabVIewController.swift */; };
+		A774813D2A11203E00ED3238 /* CreateScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774813C2A11203E00ED3238 /* CreateScheduleController.swift */; };
+		A774813F2A11206200ED3238 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774813E2A11206200ED3238 /* ScheduleViewController.swift */; };
+		A77481412A1135C200ED3238 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481402A1135C200ED3238 /* DashBoardViewController.swift */; };
+		A77481432A114D3400ED3238 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481422A114D3400ED3238 /* ProfileController.swift */; };
+		A77481462A1161D800ED3238 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */; };
 		A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497D929C363E100B87FF6 /* TextFeildCustom.swift */; };
 		A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497DB29C3934400B87FF6 /* CustomButton.swift */; };
 		A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7889F3329D94C8000EB7418 /* AlertManager.swift */; };
@@ -50,6 +57,13 @@
 /* Begin PBXFileReference section */
 		A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsViewController.swift; sourceTree = "<group>"; };
+		A77481362A0C0A0400ED3238 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A77481382A10B74500ED3238 /* MainTabVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVIewController.swift; sourceTree = "<group>"; };
+		A774813C2A11203E00ED3238 /* CreateScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScheduleController.swift; sourceTree = "<group>"; };
+		A774813E2A11206200ED3238 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		A77481402A1135C200ED3238 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		A77481422A114D3400ED3238 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewTableViewCell.swift; path = EassyWorkOut/Controllers/CollectionViewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		A78497D929C363E100B87FF6 /* TextFeildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFeildCustom.swift; sourceTree = SOURCE_ROOT; };
 		A78497DB29C3934400B87FF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = SOURCE_ROOT; };
 		A7889F3329D94C8000EB7418 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -100,6 +114,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A77481442A11616000ED3238 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A7889F3229D9481000EB7418 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +132,12 @@
 				A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */,
 				A7BA6A4029D0188C009443F6 /* WebViewerController.swift */,
 				A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */,
+				A77481362A0C0A0400ED3238 /* MenuViewController.swift */,
+				A77481382A10B74500ED3238 /* MainTabVIewController.swift */,
+				A774813C2A11203E00ED3238 /* CreateScheduleController.swift */,
+				A774813E2A11206200ED3238 /* ScheduleViewController.swift */,
+				A77481402A1135C200ED3238 /* DashBoardViewController.swift */,
+				A77481422A114D3400ED3238 /* ProfileController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +161,7 @@
 				A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */,
 				A78497D929C363E100B87FF6 /* TextFeildCustom.swift */,
 				A78497DB29C3934400B87FF6 /* CustomButton.swift */,
+				A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,8 +189,9 @@
 		B38DAE6129BC74EC007B9072 /* EassyWorkOut */ = {
 			isa = PBXGroup;
 			children = (
-				A7889F3229D9481000EB7418 /* Controllers */,
+				A77481442A11616000ED3238 /* Models */,
 				B37FE3A129BD90EA00D0B50C /* Views */,
+				A7889F3229D9481000EB7418 /* Controllers */,
 				B37FE39829BD85F000D0B50C /* Supporting */,
 				B38DAE7029BC74F1007B9072 /* Info.plist */,
 				A7889F3329D94C8000EB7418 /* AlertManager.swift */,
@@ -319,7 +348,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A774813D2A11203E00ED3238 /* CreateScheduleController.swift in Sources */,
 				B37FE3A529BD93C900D0B50C /* ForgetController.swift in Sources */,
+				A77481392A10B74500ED3238 /* MainTabVIewController.swift in Sources */,
+				A774813F2A11206200ED3238 /* ScheduleViewController.swift in Sources */,
+				A77481372A0C0A0400ED3238 /* MenuViewController.swift in Sources */,
+				A77481412A1135C200ED3238 /* DashBoardViewController.swift in Sources */,
 				A79E158C29CF487E00E33679 /* NewSplashScreenController.swift in Sources */,
 				B37FE3A729BD93ED00D0B50C /* LoginController.swift in Sources */,
 				A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */,
@@ -329,7 +363,9 @@
 				A7FC2E3D29C5FB2D00043CE4 /* SplashScreenController.swift in Sources */,
 				B37FE3A929BD944600D0B50C /* RegisterController.swift in Sources */,
 				A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */,
+				A77481432A114D3400ED3238 /* ProfileController.swift in Sources */,
 				B38DAE6329BC74EC007B9072 /* AppDelegate.swift in Sources */,
+				A77481462A1161D800ED3238 /* CollectionViewTableViewCell.swift in Sources */,
 				A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */,
 				B38DAE6529BC74EC007B9072 /* SceneDelegate.swift in Sources */,
 				A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */,

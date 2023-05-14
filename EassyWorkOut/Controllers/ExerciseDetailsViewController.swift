@@ -33,6 +33,7 @@ class ExerciseDetailsViewController: UIViewController {
         self.repsLabel.text = "\(exercise.reps) reps"
         self.setsLabel.text = "\(exercise.sets) sets"
         self.timeLabel.text = "\(exercise.time) seconds"
+        
         if let videoURL = exercise.videoURL {
             self.videoButton.isHidden = false
         } else {

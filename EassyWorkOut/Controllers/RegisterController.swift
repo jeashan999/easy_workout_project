@@ -10,6 +10,7 @@ import UIKit
 class RegisterController: UIViewController {
     private let headerview = AuthHeaderView(title: "Sign Up", subTitle: "It's quick and easy.")
     private let Name = TextFeildCustom(feildType: .Name )
+    private let ftGoal = TextFeildCustom(feildType: .fitnessGoal )
     private let useremail = TextFeildCustom(feildType: .email )
     private let userHeight = TextFeildCustom(feildType: .height )
     private let userWeight = TextFeildCustom(feildType: .weight )
@@ -70,6 +71,7 @@ class RegisterController: UIViewController {
         
         self.view.addSubview(headerview)
         self.view.addSubview(Name)
+        self.view.addSubview(ftGoal)
         self.view.addSubview(dateOfBirth)
         self.view.addSubview(userHeight)
         self.view.addSubview(userWeight)
@@ -84,6 +86,7 @@ class RegisterController: UIViewController {
         
         headerview.translatesAutoresizingMaskIntoConstraints = false
         Name.translatesAutoresizingMaskIntoConstraints = false
+        ftGoal.translatesAutoresizingMaskIntoConstraints = false
         dateOfBirth.translatesAutoresizingMaskIntoConstraints = false
         userHeight.translatesAutoresizingMaskIntoConstraints = false
         userWeight.translatesAutoresizingMaskIntoConstraints = false
@@ -107,12 +110,12 @@ class RegisterController: UIViewController {
             self.headerview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             self.headerview.heightAnchor.constraint(equalToConstant: 220),
            
-            self.Name.topAnchor.constraint(equalTo: headerview.bottomAnchor, constant:  10),
-            self.Name.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.Name.heightAnchor.constraint(equalToConstant: 40),
-            self.Name.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            self.ftGoal.topAnchor.constraint(equalTo: headerview.bottomAnchor, constant:  10),
+            self.ftGoal.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.ftGoal.heightAnchor.constraint(equalToConstant: 40),
+            self.ftGoal.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
      
-            self.dateOfBirth.topAnchor.constraint(equalTo: Name.bottomAnchor, constant:  10),
+            self.dateOfBirth.topAnchor.constraint(equalTo: ftGoal.bottomAnchor, constant:  10),
             self.dateOfBirth.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
             self.dateOfBirth.heightAnchor.constraint(equalToConstant: 40),
             self.dateOfBirth.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),

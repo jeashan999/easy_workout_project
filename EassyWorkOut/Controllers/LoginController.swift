@@ -139,7 +139,7 @@ class LoginController: UIViewController {
     // Selectors
     @objc private func goToDashBoard(){
         print("goToDashBoard")
-        let vc = HomeController()
+        let vc = MainTabVIewController()
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         self.present(nav, animated: false , completion: nil)

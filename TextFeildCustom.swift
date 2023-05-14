@@ -20,6 +20,7 @@ class TextFeildCustom: UITextField {
         case age
         case height
         case weight
+        case fitnessGoal
     }
 
     private let authFeildType: TextCustomFeildTypes
@@ -47,6 +48,8 @@ class TextFeildCustom: UITextField {
             self.placeholder = "Last Name"
         case .dateOfbirth:
             self.placeholder = "Date of birth"
+        case .fitnessGoal:
+            self.placeholder = "Fitness goal"
         case .age:
             self.placeholder = "Age"
             self.isEnabled   = false
@@ -56,7 +59,7 @@ class TextFeildCustom: UITextField {
         case .weight:
             self.placeholder = "Weight (cm)"
         case .email:
-            self.placeholder = "Email Address"
+            self.placeholder = "Email address"
             self.keyboardType = .emailAddress
             self.textContentType = .emailAddress
             
