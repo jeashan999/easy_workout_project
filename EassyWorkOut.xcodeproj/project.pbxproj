@@ -16,6 +16,7 @@
 		A77481412A1135C200ED3238 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481402A1135C200ED3238 /* DashBoardViewController.swift */; };
 		A77481432A114D3400ED3238 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481422A114D3400ED3238 /* ProfileController.swift */; };
 		A77481462A1161D800ED3238 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */; };
+		A77481482A13E8B000ED3238 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481472A13E8B000ED3238 /* HeroHeaderUIView.swift */; };
 		A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497D929C363E100B87FF6 /* TextFeildCustom.swift */; };
 		A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497DB29C3934400B87FF6 /* CustomButton.swift */; };
 		A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7889F3329D94C8000EB7418 /* AlertManager.swift */; };
@@ -64,6 +65,7 @@
 		A77481402A1135C200ED3238 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		A77481422A114D3400ED3238 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewTableViewCell.swift; path = EassyWorkOut/Controllers/CollectionViewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		A77481472A13E8B000ED3238 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeroHeaderUIView.swift; path = EassyWorkOut/Controllers/HeroHeaderUIView.swift; sourceTree = SOURCE_ROOT; };
 		A78497D929C363E100B87FF6 /* TextFeildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFeildCustom.swift; sourceTree = SOURCE_ROOT; };
 		A78497DB29C3934400B87FF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = SOURCE_ROOT; };
 		A7889F3329D94C8000EB7418 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				A78497D929C363E100B87FF6 /* TextFeildCustom.swift */,
 				A78497DB29C3934400B87FF6 /* CustomButton.swift */,
 				A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */,
+				A77481472A13E8B000ED3238 /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				B38DAE6329BC74EC007B9072 /* AppDelegate.swift in Sources */,
 				A77481462A1161D800ED3238 /* CollectionViewTableViewCell.swift in Sources */,
 				A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */,
+				A77481482A13E8B000ED3238 /* HeroHeaderUIView.swift in Sources */,
 				B38DAE6529BC74EC007B9072 /* SceneDelegate.swift in Sources */,
 				A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */,
 			);

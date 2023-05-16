@@ -9,41 +9,48 @@ import UIKit
 
 class DashBoardViewController: UIViewController{
     private let workoutsTableView: UITableView = {
-        let tableView = UITableView(frame: .zero,  style: .grouped)
-        tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
-        return tableView
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        view.addSubview(workoutsTableView)
-
-        workoutsTableView.delegate = self
-        workoutsTableView.dataSource = self
-        configuration()
+            let tableView = UITableView(frame: .zero, style: .grouped)
+            tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
+            return tableView
+        }()
         
-        workoutsTableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
-        // Do any additional setup after loading the view.
-    }
-    private func configuration(){
-        var image = UIImage(named: "logoName")
-        image = image?.withRenderingMode(.alwaysOriginal)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
-        navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self ,action: nil),
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            view.backgroundColor = .systemBackground
+            view.addSubview(workoutsTableView)
             
+            workoutsTableView.delegate = self
+            workoutsTableView.dataSource = self
+            configureNavigationBar()
+            
+            let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+            workoutsTableView.tableHeaderView = headerView
+        }
         
-        ]
-        navigationController?.navigationBar.tintColor = .white
+        override func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+            workoutsTableView.frame = view.bounds
+        }
+        
+        private func configureNavigationBar() {
+            // Remove the image and set the app name with a different font
+            let appNameLabel = UILabel()
+            appNameLabel.text = "EassyWorkOut"
+            appNameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+            appNameLabel.textColor = .white
+            navigationItem.titleView = appNameLabel
+            
+            // Right bar button item with gear icon
+            let gearBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(gearButtonTapped))
+            
+            navigationItem.rightBarButtonItem = gearBarButtonItem
+            navigationController?.navigationBar.tintColor = .white
+        }
+        
+        @objc private func gearButtonTapped() {
+            // Handle gear button tap event
+        }
     }
-    override func viewWillLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        workoutsTableView.frame = view.bounds
-    }
-    
-}
- 
 extension DashBoardViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 10
@@ -66,5 +73,11 @@ extension DashBoardViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defultOffset = view.safeAreaInsets.top
+        let offSet = scrollView.contentOffset.y + defultOffset
+        
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0,-offSet))
     }
 }
