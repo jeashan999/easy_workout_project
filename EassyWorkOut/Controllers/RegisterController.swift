@@ -41,7 +41,7 @@ class RegisterController: UIViewController {
         self.userSignUp.addTarget(self, action: #selector(goToDashBoard), for: .touchUpInside)
         self.userLogin.addTarget(self, action: #selector(goToLogin), for: .touchUpInside)
         self.userPasswordForget.addTarget(self, action: #selector(goToForgetPassword), for: .touchUpInside)
-        createDatePicker()
+//        createDatePicker()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -49,34 +49,30 @@ class RegisterController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         
     }
-    func createDatePicker(){
-        // tool bar
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        // date picker mode
-        self.datepicker.datePickerMode = .date
-        self.datepicker.preferredDatePickerStyle = .wheels
-        // bar done button
-        let bardonebtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(gotoDoneBtn))
-        toolbar.setItems([bardonebtn], animated: true)
-        // assgin toolbar
-        dateOfBirth.inputAccessoryView = toolbar
-        dateOfBirth.inputView = datepicker
-        dateOfBirth.textAlignment = .left
-    }
+//    func createDatePicker(){
+//        // tool bar
+//        let toolbar = UIToolbar()
+//        toolbar.sizeToFit()
+//
+//        // date picker mode
+//        self.datepicker.datePickerMode = .date
+//        self.datepicker.preferredDatePickerStyle = .wheels
+//        // bar done button
+//        let bardonebtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(gotoDoneBtn))
+//        toolbar.setItems([bardonebtn], animated: true)
+//        // assgin toolbar
+//        dateOfBirth.inputAccessoryView = toolbar
+//        dateOfBirth.inputView = datepicker
+//        dateOfBirth.textAlignment = .left
+//    }
     
 
     private func setupUI() {
         
         self.view.addSubview(headerview)
         self.view.addSubview(Name)
-        self.view.addSubview(ftGoal)
-        self.view.addSubview(dateOfBirth)
-        self.view.addSubview(userHeight)
-        self.view.addSubview(userWeight)
+
         self.view.addSubview(useremail)
-        self.view.addSubview(age)
         self.view.addSubview(passwordFeild)
         self.view.addSubview(userLogin)
         self.view.addSubview(userSignUp)
@@ -86,10 +82,7 @@ class RegisterController: UIViewController {
         
         headerview.translatesAutoresizingMaskIntoConstraints = false
         Name.translatesAutoresizingMaskIntoConstraints = false
-        ftGoal.translatesAutoresizingMaskIntoConstraints = false
-        dateOfBirth.translatesAutoresizingMaskIntoConstraints = false
-        userHeight.translatesAutoresizingMaskIntoConstraints = false
-        userWeight.translatesAutoresizingMaskIntoConstraints = false
+
         age.translatesAutoresizingMaskIntoConstraints = false
         useremail.translatesAutoresizingMaskIntoConstraints = false
         passwordFeild.translatesAutoresizingMaskIntoConstraints = false
@@ -110,27 +103,14 @@ class RegisterController: UIViewController {
             self.headerview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             self.headerview.heightAnchor.constraint(equalToConstant: 220),
            
-            self.ftGoal.topAnchor.constraint(equalTo: headerview.bottomAnchor, constant:  10),
-            self.ftGoal.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.ftGoal.heightAnchor.constraint(equalToConstant: 40),
-            self.ftGoal.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            self.Name.topAnchor.constraint(equalTo: headerview.bottomAnchor, constant:  10),
+            self.Name.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
+            self.Name.heightAnchor.constraint(equalToConstant: 40),
+            self.Name.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
      
-            self.dateOfBirth.topAnchor.constraint(equalTo: ftGoal.bottomAnchor, constant:  10),
-            self.dateOfBirth.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.dateOfBirth.heightAnchor.constraint(equalToConstant: 40),
-            self.dateOfBirth.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+
             
-            self.userHeight.topAnchor.constraint(equalTo: dateOfBirth.bottomAnchor, constant:  10),
-            self.userHeight.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.userHeight.heightAnchor.constraint(equalToConstant: 40),
-            self.userHeight.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-            
-            self.userWeight.topAnchor.constraint(equalTo: userHeight.bottomAnchor, constant:  10),
-            self.userWeight.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
-            self.userWeight.heightAnchor.constraint(equalToConstant: 40),
-            self.userWeight.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-            
-            self.useremail.topAnchor.constraint(equalTo: userWeight.bottomAnchor, constant:  25),
+            self.useremail.topAnchor.constraint(equalTo: Name.bottomAnchor, constant:  25),
             self.useremail.centerXAnchor.constraint(equalTo: headerview.centerXAnchor),
             self.useremail.heightAnchor.constraint(equalToConstant: 40),
             self.useremail.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
@@ -161,38 +141,38 @@ class RegisterController: UIViewController {
     // Selectors
     @objc private func goToDashBoard(){
         print("goToDashBoard")
-        let vc = HomeController()
+        let vc = MainTabVIewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false , completion: nil)
     }
     @objc private func goToLogin(){
         print("goToLogin")
-//        let vc = LoginController()
+        let vc = LoginController()
 //        self.navigationController?.pushViewController(vc, animated: true)
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     @objc private func goToForgetPassword(){
         print("goToForgetPassword")
         let vc = ForgetController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    @objc private func gotoDoneBtn(){
-        let dateFormater = DateFormatter()
-        dateFormater.dateStyle = .medium
-        dateFormater.timeStyle = .none
-        dateFormater.dateFormat = "MM/dd/yyyy"
-        dateOfBirth.text = dateFormater.string(from: datepicker.date)
-        let date = dateFormater.string(from: datepicker.date)
-        let dateOfBirth = dateFormater.date(from: date)
-
-           let calender = Calendar.current
-
-           let dateComponent = calender.dateComponents([.year, .month, .day], from:
-           dateOfBirth!, to: Date())
-        let x = dateComponent.year!
-        let str = String(x)
-        age.text = str+" "+"y"
-        self.view.endEditing(true)
-    }
+//    @objc private func gotoDoneBtn(){
+//        let dateFormater = DateFormatter()
+//        dateFormater.dateStyle = .medium
+//        dateFormater.timeStyle = .none
+//        dateFormater.dateFormat = "MM/dd/yyyy"
+//        dateOfBirth.text = dateFormater.string(from: datepicker.date)
+//        let date = dateFormater.string(from: datepicker.date)
+//        let dateOfBirth = dateFormater.date(from: date)
+//
+//           let calender = Calendar.current
+//
+//           let dateComponent = calender.dateComponents([.year, .month, .day], from:
+//           dateOfBirth!, to: Date())
+//        let x = dateComponent.year!
+//        let str = String(x)
+//        age.text = str+" "+"y"
+//        self.view.endEditing(true)
+//    }
 
 }

@@ -17,6 +17,11 @@
 		A77481432A114D3400ED3238 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481422A114D3400ED3238 /* ProfileController.swift */; };
 		A77481462A1161D800ED3238 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */; };
 		A77481482A13E8B000ED3238 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481472A13E8B000ED3238 /* HeroHeaderUIView.swift */; };
+		A774814A2A15288900ED3238 /* AgeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481492A15288900ED3238 /* AgeSelectViewController.swift */; };
+		A774814C2A152D2C00ED3238 /* WeightSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774814B2A152D2C00ED3238 /* WeightSelectViewController.swift */; };
+		A774814E2A15364400ED3238 /* FitnessGoalSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774814D2A15364400ED3238 /* FitnessGoalSelectController.swift */; };
+		A77481502A15397600ED3238 /* FitnessGoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774814F2A15397600ED3238 /* FitnessGoalCardView.swift */; };
+		A77481522A15505F00ED3238 /* HeightSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481512A15505F00ED3238 /* HeightSelectViewController.swift */; };
 		A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497D929C363E100B87FF6 /* TextFeildCustom.swift */; };
 		A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497DB29C3934400B87FF6 /* CustomButton.swift */; };
 		A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7889F3329D94C8000EB7418 /* AlertManager.swift */; };
@@ -66,6 +71,11 @@
 		A77481422A114D3400ED3238 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewTableViewCell.swift; path = EassyWorkOut/Controllers/CollectionViewTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		A77481472A13E8B000ED3238 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeroHeaderUIView.swift; path = EassyWorkOut/Controllers/HeroHeaderUIView.swift; sourceTree = SOURCE_ROOT; };
+		A77481492A15288900ED3238 /* AgeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeSelectViewController.swift; sourceTree = "<group>"; };
+		A774814B2A152D2C00ED3238 /* WeightSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightSelectViewController.swift; sourceTree = "<group>"; };
+		A774814D2A15364400ED3238 /* FitnessGoalSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessGoalSelectController.swift; sourceTree = "<group>"; };
+		A774814F2A15397600ED3238 /* FitnessGoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FitnessGoalCardView.swift; path = EassyWorkOut/Controllers/FitnessGoalCardView.swift; sourceTree = SOURCE_ROOT; };
+		A77481512A15505F00ED3238 /* HeightSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightSelectViewController.swift; sourceTree = "<group>"; };
 		A78497D929C363E100B87FF6 /* TextFeildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFeildCustom.swift; sourceTree = SOURCE_ROOT; };
 		A78497DB29C3934400B87FF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = SOURCE_ROOT; };
 		A7889F3329D94C8000EB7418 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -140,6 +150,10 @@
 				A774813E2A11206200ED3238 /* ScheduleViewController.swift */,
 				A77481402A1135C200ED3238 /* DashBoardViewController.swift */,
 				A77481422A114D3400ED3238 /* ProfileController.swift */,
+				A77481492A15288900ED3238 /* AgeSelectViewController.swift */,
+				A774814B2A152D2C00ED3238 /* WeightSelectViewController.swift */,
+				A774814D2A15364400ED3238 /* FitnessGoalSelectController.swift */,
+				A77481512A15505F00ED3238 /* HeightSelectViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +179,7 @@
 				A78497DB29C3934400B87FF6 /* CustomButton.swift */,
 				A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */,
 				A77481472A13E8B000ED3238 /* HeroHeaderUIView.swift */,
+				A774814F2A15397600ED3238 /* FitnessGoalCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A774814A2A15288900ED3238 /* AgeSelectViewController.swift in Sources */,
 				A774813D2A11203E00ED3238 /* CreateScheduleController.swift in Sources */,
 				B37FE3A529BD93C900D0B50C /* ForgetController.swift in Sources */,
 				A77481392A10B74500ED3238 /* MainTabVIewController.swift in Sources */,
@@ -358,18 +374,22 @@
 				A77481372A0C0A0400ED3238 /* MenuViewController.swift in Sources */,
 				A77481412A1135C200ED3238 /* DashBoardViewController.swift in Sources */,
 				A79E158C29CF487E00E33679 /* NewSplashScreenController.swift in Sources */,
+				A77481522A15505F00ED3238 /* HeightSelectViewController.swift in Sources */,
 				B37FE3A729BD93ED00D0B50C /* LoginController.swift in Sources */,
 				A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */,
+				A77481502A15397600ED3238 /* FitnessGoalCardView.swift in Sources */,
 				A7BA6A4129D0188C009443F6 /* WebViewerController.swift in Sources */,
 				A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */,
 				B37FE3AB29BD946B00D0B50C /* HomeController.swift in Sources */,
 				A7FC2E3D29C5FB2D00043CE4 /* SplashScreenController.swift in Sources */,
 				B37FE3A929BD944600D0B50C /* RegisterController.swift in Sources */,
+				A774814E2A15364400ED3238 /* FitnessGoalSelectController.swift in Sources */,
 				A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */,
 				A77481432A114D3400ED3238 /* ProfileController.swift in Sources */,
 				B38DAE6329BC74EC007B9072 /* AppDelegate.swift in Sources */,
 				A77481462A1161D800ED3238 /* CollectionViewTableViewCell.swift in Sources */,
 				A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */,
+				A774814C2A152D2C00ED3238 /* WeightSelectViewController.swift in Sources */,
 				A77481482A13E8B000ED3238 /* HeroHeaderUIView.swift in Sources */,
 				B38DAE6529BC74EC007B9072 /* SceneDelegate.swift in Sources */,
 				A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */,

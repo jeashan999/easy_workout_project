@@ -146,7 +146,7 @@ class LoginController: UIViewController {
     }
     @objc private func goToCreateAccount(){
         print("goToCreateAccount")
-        let vc = RegisterController()
+        let vc = FitnessGoalSelectController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @objc private func goToForgetPassword(){

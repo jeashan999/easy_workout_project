@@ -16,7 +16,7 @@ class SplashScreenController: UIViewController {
         super.viewDidLoad()
         
         playVideo()
-        getstartButton.addTarget(self, action: #selector(gotnextPage), for: .touchUpInside)
+//        getstartButton.addTarget(self, action: #selector(gotnextPage), for: .touchUpInside)
         // Do any additional setup after loading the view.
         gameTimer = Timer.scheduledTimer(timeInterval: 9, target: self, selector: #selector(gotnextPage), userInfo: nil, repeats: false)
     }
@@ -56,7 +56,7 @@ class SplashScreenController: UIViewController {
         
         let button = UIButton()
                
-        button.setTitle("Get Started Now", for: .normal)
+//        button.setTitle("Get Started Now", for: .normal)
         button.titleLabel?.font = UIFont(name: "SF Compact", size: 20)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.translatesAutoresizingMaskIntoConstraints = false

@@ -35,9 +35,9 @@ class DashBoardViewController: UIViewController{
         private func configureNavigationBar() {
             // Remove the image and set the app name with a different font
             let appNameLabel = UILabel()
-            appNameLabel.text = "EassyWorkOut"
-            appNameLabel.font = UIFont.boldSystemFont(ofSize: 18)
-            appNameLabel.textColor = .white
+            appNameLabel.text = "Eassy WorkOut"
+            appNameLabel.font = UIFont.boldSystemFont(ofSize: 20)
+            appNameLabel.textColor = .label
             navigationItem.titleView = appNameLabel
             
             // Right bar button item with gear icon
