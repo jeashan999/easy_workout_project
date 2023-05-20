@@ -15,17 +15,17 @@ class MainTabVIewController: UITabBarController {
         // Do any additional setup after loading the view.
         let vc1 = UINavigationController(rootViewController: DashBoardViewController())
         let vc2 = UINavigationController(rootViewController: ScheduleViewController())
-        let vc3 = UINavigationController(rootViewController: CreateScheduleController())
+        let vc3 = UINavigationController(rootViewController: WorkoutListViewController())
         let vc4 = UINavigationController(rootViewController: ProfileController())
         
-        vc1.tabBarItem.image = UIImage(systemName: "house.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal)
-        vc2.tabBarItem.image = UIImage(systemName: "chart.bar.doc.horizontal.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal)
-        vc3.tabBarItem.image = UIImage(systemName: "calendar.badge.plus")?.withTintColor(.black, renderingMode: .alwaysOriginal)
-        vc4.tabBarItem.image = UIImage(systemName: "person.circle.fill")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        vc1.tabBarItem.image = UIImage(systemName: "house.fill")
+        vc2.tabBarItem.image = UIImage(systemName: "chart.bar.doc.horizontal.fill")
+        vc3.tabBarItem.image = UIImage(systemName: "figure.run.circle.fill")
+        vc4.tabBarItem.image = UIImage(systemName: "person.circle.fill")
         
         vc1.title = "Home"
         vc2.title = "View Schedule"
-        vc3.title = "Create New Schedule"
+        vc3.title = "Workout Search"
         vc4.title = "Profile"
         
         tabBar.tintColor = .label

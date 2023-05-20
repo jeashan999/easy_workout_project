@@ -15,7 +15,7 @@ class WeightSelectViewController: UIViewController {
     private let weightLabel = UILabel()
     private let confirmButton = CustomButton(title: "Next", hasBackground: true, fontSize: .big)
     
-    private let weightRange = 1...1000 // Range of weight values
+    private let weightRange = 1...200 // Range of weight values
     
     override func viewDidLoad() {
         super.viewDidLoad()

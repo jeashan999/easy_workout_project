@@ -25,6 +25,9 @@
 		A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497D929C363E100B87FF6 /* TextFeildCustom.swift */; };
 		A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497DB29C3934400B87FF6 /* CustomButton.swift */; };
 		A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7889F3329D94C8000EB7418 /* AlertManager.swift */; };
+		A788DC802A178A5D00EC982F /* WorkoutProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788DC7F2A178A5D00EC982F /* WorkoutProgressView.swift */; };
+		A788DC832A188DC400EC982F /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788DC822A188DC400EC982F /* WorkoutListViewController.swift */; };
+		A788DC852A18E2B500EC982F /* WorkoutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788DC842A18E2B500EC982F /* WorkoutDetailViewController.swift */; };
 		A789EFF62A062F4500BBC9F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A789EFF52A062F4500BBC9F2 /* GoogleService-Info.plist */; };
 		A79E158C29CF487E00E33679 /* NewSplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */; };
 		A7BA6A4129D0188C009443F6 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA6A4029D0188C009443F6 /* WebViewerController.swift */; };
@@ -79,6 +82,9 @@
 		A78497D929C363E100B87FF6 /* TextFeildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFeildCustom.swift; sourceTree = SOURCE_ROOT; };
 		A78497DB29C3934400B87FF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = SOURCE_ROOT; };
 		A7889F3329D94C8000EB7418 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		A788DC7F2A178A5D00EC982F /* WorkoutProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutProgressView.swift; path = EassyWorkOut/Controllers/WorkoutProgressView.swift; sourceTree = SOURCE_ROOT; };
+		A788DC822A188DC400EC982F /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
+		A788DC842A18E2B500EC982F /* WorkoutDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailViewController.swift; sourceTree = "<group>"; };
 		A789EFF52A062F4500BBC9F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSplashScreenController.swift; sourceTree = "<group>"; };
 		A7BA6A4029D0188C009443F6 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
@@ -154,8 +160,17 @@
 				A774814B2A152D2C00ED3238 /* WeightSelectViewController.swift */,
 				A774814D2A15364400ED3238 /* FitnessGoalSelectController.swift */,
 				A77481512A15505F00ED3238 /* HeightSelectViewController.swift */,
+				A788DC822A188DC400EC982F /* WorkoutListViewController.swift */,
+				A788DC842A18E2B500EC982F /* WorkoutDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A788DC812A17D59200EC982F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		B37FE39829BD85F000D0B50C /* Supporting */ = {
@@ -180,6 +195,7 @@
 				A77481452A1161D800ED3238 /* CollectionViewTableViewCell.swift */,
 				A77481472A13E8B000ED3238 /* HeroHeaderUIView.swift */,
 				A774814F2A15397600ED3238 /* FitnessGoalCardView.swift */,
+				A788DC7F2A178A5D00EC982F /* WorkoutProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +223,7 @@
 		B38DAE6129BC74EC007B9072 /* EassyWorkOut */ = {
 			isa = PBXGroup;
 			children = (
+				A788DC812A17D59200EC982F /* Managers */,
 				A77481442A11616000ED3238 /* Models */,
 				B37FE3A129BD90EA00D0B50C /* Views */,
 				A7889F3229D9481000EB7418 /* Controllers */,
@@ -369,7 +386,9 @@
 				A774814A2A15288900ED3238 /* AgeSelectViewController.swift in Sources */,
 				A774813D2A11203E00ED3238 /* CreateScheduleController.swift in Sources */,
 				B37FE3A529BD93C900D0B50C /* ForgetController.swift in Sources */,
+				A788DC802A178A5D00EC982F /* WorkoutProgressView.swift in Sources */,
 				A77481392A10B74500ED3238 /* MainTabVIewController.swift in Sources */,
+				A788DC852A18E2B500EC982F /* WorkoutDetailViewController.swift in Sources */,
 				A774813F2A11206200ED3238 /* ScheduleViewController.swift in Sources */,
 				A77481372A0C0A0400ED3238 /* MenuViewController.swift in Sources */,
 				A77481412A1135C200ED3238 /* DashBoardViewController.swift in Sources */,
@@ -386,6 +405,7 @@
 				A774814E2A15364400ED3238 /* FitnessGoalSelectController.swift in Sources */,
 				A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */,
 				A77481432A114D3400ED3238 /* ProfileController.swift in Sources */,
+				A788DC832A188DC400EC982F /* WorkoutListViewController.swift in Sources */,
 				B38DAE6329BC74EC007B9072 /* AppDelegate.swift in Sources */,
 				A77481462A1161D800ED3238 /* CollectionViewTableViewCell.swift in Sources */,
 				A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */,

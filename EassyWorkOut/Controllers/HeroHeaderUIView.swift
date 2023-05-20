@@ -28,18 +28,34 @@ class HeroHeaderUIView: UIView {
         return label
     }()
     
+    private let additionalLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla turpis a odio maximus vestibulum. Nullam eu finibus massa. Nunc ut placerat mauris. Morbi non ante ligula."
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .white
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(heroImageView)
         addSubview(welcomeLabel)
         addSubview(aboutLabel)
+        addSubview(additionalLabel)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         heroImageView.frame = bounds
-        welcomeLabel.frame = CGRect(x: 16, y: bounds.height - 200, width: bounds.width - 32, height: 30)
-        aboutLabel.frame = CGRect(x: 16, y: bounds.height - 170, width: bounds.width - 32, height: 100)
+        
+        let contentWidth = bounds.width - 32
+        let centerY = bounds.height / 2
+        
+        welcomeLabel.frame = CGRect(x: 16, y: centerY - 80, width: contentWidth, height: 30)
+        aboutLabel.frame = CGRect(x: 16, y: welcomeLabel.frame.maxY + 10, width: contentWidth, height: 100)
+        additionalLabel.frame = CGRect(x: 16, y: aboutLabel.frame.maxY + 10, width: contentWidth, height: 150)
     }
     
     required init?(coder: NSCoder) {
