@@ -22,7 +22,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         return collectionView
     }()
     
-    // Sample workout data
+    
     let workoutData: [(title: String, image: UIImage, details: String)] = [
         (title: "Cardiovascular Exercises", image: UIImage(named: "Bicep")!, details: "Build muscle and strength"),
         (title: "Strength Training", image: UIImage(named: "Bicep")!, details: "Improve cardiovascular fitness"),

@@ -139,13 +139,16 @@ class LoginController: UIViewController {
     // Selectors
     @objc private func goToDashBoard(){
         print("goToDashBoard")
-//        let vc = MainTabVIewController()
-//        let nav = UINavigationController(rootViewController: vc)
-//        nav.modalPresentationStyle = .fullScreen
-//        self.present(nav, animated: false , completion: nil)
-          let videoURL = URL(string: "https://www.youtube.com/watch?v=kfP_9z-BtmA")! // Replace with your workout video URL
-            let workoutDetailViewController = WorkoutDetailViewController(videoURL: videoURL)
-            present(workoutDetailViewController, animated: true, completion: nil)
+        let vc = MainTabVIewController()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: false , completion: nil)
+//        let videoURLString = "https://www.youtube.com/watch?v=S5kOK3bxfro"
+//        let description = "Super-Pump Arm Workout"
+//
+//        let workoutDetailViewController = WorkoutDetailViewController(videoURLString: videoURLString, workoutDescription: description)
+//        present(workoutDetailViewController, animated: true, completion: nil)
+
     }
     @objc private func goToCreateAccount(){
         print("goToCreateAccount")

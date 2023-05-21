@@ -54,9 +54,9 @@ class WorkoutListViewController: UIViewController {
         categoriesDropdownView.delegate = self
         categoriesDropdownView.dataSource = self
         
-        configureNavigationBar()
+//        configureNavigationBar()
         
-        // Sample data
+       
         workouts = [
             Workout(title: "Cardio Workout 1", category: "Cardio"),
             Workout(title: "Strength Training 1", category: "Strength Training"),
@@ -99,11 +99,11 @@ class WorkoutListViewController: UIViewController {
     }
 
     
-    private func configureNavigationBar() {
-        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
-        navigationItem.rightBarButtonItem = addBarButtonItem
-        navigationController?.navigationBar.tintColor = .white
-    }
+//    private func configureNavigationBar() {
+//        let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+//        navigationItem.rightBarButtonItem = addBarButtonItem
+//        navigationController?.navigationBar.tintColor = .white
+//    }
     
     @objc private func addButtonTapped() {
         // Handle add button tap event
