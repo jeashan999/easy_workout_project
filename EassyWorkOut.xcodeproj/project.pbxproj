@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */; };
+		A75AD4F92A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD4F82A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift */; };
+		A75AD4FB2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD4FA2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift */; };
 		A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */; };
 		A77481372A0C0A0400ED3238 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481362A0C0A0400ED3238 /* MenuViewController.swift */; };
 		A77481392A10B74500ED3238 /* MainTabVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481382A10B74500ED3238 /* MainTabVIewController.swift */; };
@@ -28,7 +30,6 @@
 		A788DC802A178A5D00EC982F /* WorkoutProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788DC7F2A178A5D00EC982F /* WorkoutProgressView.swift */; };
 		A788DC832A188DC400EC982F /* WorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788DC822A188DC400EC982F /* WorkoutListViewController.swift */; };
 		A788DC852A18E2B500EC982F /* WorkoutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788DC842A18E2B500EC982F /* WorkoutDetailViewController.swift */; };
-		A789EFF62A062F4500BBC9F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A789EFF52A062F4500BBC9F2 /* GoogleService-Info.plist */; };
 		A79E158C29CF487E00E33679 /* NewSplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */; };
 		A7BA6A4129D0188C009443F6 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA6A4029D0188C009443F6 /* WebViewerController.swift */; };
 		A7FC2E3D29C5FB2D00043CE4 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */; };
@@ -65,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = SOURCE_ROOT; };
+		A75AD4F82A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoriesWorkoutListViewController.swift; sourceTree = "<group>"; };
+		A75AD4FA2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleWorkoutDetailsViewController.swift; sourceTree = "<group>"; };
 		A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsViewController.swift; sourceTree = "<group>"; };
 		A77481362A0C0A0400ED3238 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A77481382A10B74500ED3238 /* MainTabVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVIewController.swift; sourceTree = "<group>"; };
@@ -85,7 +88,6 @@
 		A788DC7F2A178A5D00EC982F /* WorkoutProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutProgressView.swift; path = EassyWorkOut/Controllers/WorkoutProgressView.swift; sourceTree = SOURCE_ROOT; };
 		A788DC822A188DC400EC982F /* WorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewController.swift; sourceTree = "<group>"; };
 		A788DC842A18E2B500EC982F /* WorkoutDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailViewController.swift; sourceTree = "<group>"; };
-		A789EFF52A062F4500BBC9F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A79E158B29CF487E00E33679 /* NewSplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSplashScreenController.swift; sourceTree = "<group>"; };
 		A7BA6A4029D0188C009443F6 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
 		A7FC2E3C29C5FB2D00043CE4 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,8 @@
 				A77481512A15505F00ED3238 /* HeightSelectViewController.swift */,
 				A788DC822A188DC400EC982F /* WorkoutListViewController.swift */,
 				A788DC842A18E2B500EC982F /* WorkoutDetailViewController.swift */,
+				A75AD4F82A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift */,
+				A75AD4FA2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,7 +185,6 @@
 				B38DAE6429BC74EC007B9072 /* SceneDelegate.swift */,
 				B38DAE6D29BC74F1007B9072 /* LaunchScreen.storyboard */,
 				A7FC2E3F29C61B7500043CE4 /* gymVideo.mp4 */,
-				A789EFF52A062F4500BBC9F2 /* GoogleService-Info.plist */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -356,7 +359,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FC2E4229C61DA000043CE4 /* gymVideo.mp4 in Resources */,
-				A789EFF62A062F4500BBC9F2 /* GoogleService-Info.plist in Resources */,
 				B38DAE6F29BC74F1007B9072 /* LaunchScreen.storyboard in Resources */,
 				B38DAE6C29BC74F1007B9072 /* Assets.xcassets in Resources */,
 			);
@@ -390,6 +392,7 @@
 				A77481392A10B74500ED3238 /* MainTabVIewController.swift in Sources */,
 				A788DC852A18E2B500EC982F /* WorkoutDetailViewController.swift in Sources */,
 				A774813F2A11206200ED3238 /* ScheduleViewController.swift in Sources */,
+				A75AD4FB2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift in Sources */,
 				A77481372A0C0A0400ED3238 /* MenuViewController.swift in Sources */,
 				A77481412A1135C200ED3238 /* DashBoardViewController.swift in Sources */,
 				A79E158C29CF487E00E33679 /* NewSplashScreenController.swift in Sources */,
@@ -410,6 +413,7 @@
 				A77481462A1161D800ED3238 /* CollectionViewTableViewCell.swift in Sources */,
 				A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */,
 				A774814C2A152D2C00ED3238 /* WeightSelectViewController.swift in Sources */,
+				A75AD4F92A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift in Sources */,
 				A77481482A13E8B000ED3238 /* HeroHeaderUIView.swift in Sources */,
 				B38DAE6529BC74EC007B9072 /* SceneDelegate.swift in Sources */,
 				A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */,
