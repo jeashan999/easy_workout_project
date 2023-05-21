@@ -12,7 +12,7 @@ class WorkoutProgressView: UIView {
         super.init(frame: frame)
         addSubview(chartView)
         configureConstraints()
-        let data = [10.0, 20.0, 30.0, 40.0, 50.0] // Example data
+        let data = [10.0, 20.0, 30.0, 40.0, 50.0] 
         updateChart(with: data)
     }
     

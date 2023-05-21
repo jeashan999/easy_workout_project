@@ -15,14 +15,11 @@ class SmallCardTableViewCell: UITableViewCell {
         
         // Configure the cell's appearance and layout
         backgroundColor = .white
-        // Add subviews and set up constraints
         
-        // Example: Add a label to display content
         let contentLabel = UILabel()
         contentLabel.font = UIFont.systemFont(ofSize: 14)
         contentLabel.textColor = .black
-        // Configure the label's appearance and layout
-        // ...
+        
         
         contentView.addSubview(contentLabel)
         

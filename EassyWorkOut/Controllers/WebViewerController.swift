@@ -27,7 +27,7 @@ class WebViewerController: UIViewController , WKNavigationDelegate {
         ])
         
         // Load the terms and conditions URL in the web view
-        if let url = URL(string: "file:///Users/neatlanka/Documents/index.html") {
+        if let url = URL(string: "https://annesuppliers.com/jeashan/privacyPolicy.html") {
             webView.load(URLRequest(url: url))
         }
         

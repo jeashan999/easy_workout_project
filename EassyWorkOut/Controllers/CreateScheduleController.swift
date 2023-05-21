@@ -62,7 +62,7 @@ class CreateScheduleController: UIViewController, UIPickerViewDelegate, UIPicker
         
         workoutPickerView.delegate = self
         workoutPickerView.dataSource = self
-        workoutPickerView.frame = CGRect(x: 20, y: workoutLabel.frame.maxY + 5, width: popupWidth - 40, height: 80)
+        workoutPickerView.frame = CGRect(x: 20, y: workoutLabel.frame.maxY + 5, width: popupWidth - 40, height: 70)
         contentView.addSubview(workoutPickerView)
         
         placeLabel.text = "Place:"
@@ -79,8 +79,8 @@ class CreateScheduleController: UIViewController, UIPickerViewDelegate, UIPicker
         dateLabel.frame = CGRect(x: 0, y: placeTextField.frame.maxY + 10, width: popupWidth, height: 30)
         contentView.addSubview(dateLabel)
         
-        dateTimePicker.datePickerMode = .dateAndTime // New: Date and time picker
-        dateTimePicker.frame = CGRect(x: 20, y: dateLabel.frame.maxY + 3, width: popupWidth - 40, height: 50)
+        dateTimePicker.datePickerMode = .dateAndTime
+        dateTimePicker.frame = CGRect(x: 20, y: dateLabel.frame.maxY + 3, width: popupWidth - 40, height: 30)
         contentView.addSubview(dateTimePicker)
         
         submitButton.setTitle("Submit", for: .normal)

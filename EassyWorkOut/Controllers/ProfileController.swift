@@ -170,6 +170,10 @@ class ProfileController: UIViewController {
             saveChangesButton.heightAnchor.constraint(equalToConstant: 50),
             saveChangesButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16)
         ])
+               nameTextField.text = "Jeashan anuja"
+                heightTextField.text = "180 cm"
+                weightTextField.text = "50 kg"
+                ageTextField.text = "23"
     }
     
     @objc private func changePasswordButtonTapped() {

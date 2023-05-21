@@ -54,9 +54,9 @@ class HomeController: UIViewController {
     }()
 
     private let upcomingWorkouts = [
-        ("Chest Day - Monday", "10:00 AM - 11:00 AM", "30% Complete"),
+        ("Chest Day - Monday", "10:00 AM - 11:00 AM", "60% Complete"),
         ("Leg Day - Wednesday", "11:00 AM - 12:00 PM", "60% Complete"),
-        ("Arms Day - Friday", "12:00 PM - 1:00 PM", "90% Complete")
+        ("Arms Day - Friday", "12:00 PM - 1:00 PM", "80% Complete")
     ]
 
     override func viewDidLoad() {
