@@ -13,7 +13,7 @@ class MainTabVIewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let vc1 = UINavigationController(rootViewController: DashBoardViewController())
+        let vc1 = UINavigationController(rootViewController: HomeController())
         let vc2 = UINavigationController(rootViewController: ScheduleViewController())
         let vc3 = UINavigationController(rootViewController: WorkoutListViewController())
         let vc4 = UINavigationController(rootViewController: ProfileController())

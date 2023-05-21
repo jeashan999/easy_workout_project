@@ -42,7 +42,7 @@ class LoginController: UIViewController {
                 cardView.layer.shadowOpacity = 0.5
                 cardView.layer.shadowRadius = 4
                 cardView.layer.opacity = 0.2
-        // Do any additional setup after loading the view.
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

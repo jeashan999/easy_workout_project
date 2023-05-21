@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeController: UIViewController,MenuViewControllerDelegate {
-    
+class HomeController: UIViewController {
+
     private var menuViewController: MenuViewController?
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -17,164 +17,164 @@ class HomeController: UIViewController,MenuViewControllerDelegate {
         label.textAlignment = .center
         return label
     }()
-    
+
     private let summaryLabel: UILabel = {
         let label = UILabel()
-        label.text = "Welcome to your easy workout app dashboard. Here, you can see your progress and upcoming workouts."
+        label.text = "This app provides you with tools to track your workouts, set fitness goals, and monitor your progress. Stay motivated and achieve your fitness goals with Gym Dashboard!"
         label.numberOfLines = 0
         label.textAlignment = .center
         return label
     }()
-    
+
     private let progressView: UIProgressView = {
         let progressView = UIProgressView(progressViewStyle: .default)
-        progressView.progressTintColor = .systemGreen
+        progressView.progressTintColor = .systemIndigo
         progressView.trackTintColor = .systemGray
-        progressView.progress = 0.5
+        progressView.progress = 0.9 // Set the progress value as desired
         return progressView
     }()
-    
+
     private let upcomingWorkoutsLabel: UILabel = {
         let label = UILabel()
         label.text = "Upcoming Workouts:"
         label.font = .systemFont(ofSize: 18, weight: .semibold)
         return label
     }()
-    
-    private let upcomingWorkoutsTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.tableFooterView = UIView()
-        return tableView
+
+    private let upcomingWorkoutsCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.backgroundColor = .clear
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
     }()
-    
 
-    private let upcomingWorkouts = ["Chest Day - Monday", "Leg Day - Wednesday", "Back Day - Friday"]
+    private let upcomingWorkouts = [
+        ("Chest Day - Monday", "10:00 AM - 11:00 AM", "30% Complete"),
+        ("Leg Day - Wednesday", "11:00 AM - 12:00 PM", "60% Complete"),
+        ("Arms Day - Friday", "12:00 PM - 1:00 PM", "90% Complete")
+    ]
 
- override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         view.backgroundColor = .systemBackground
-        
+
         view.addSubview(titleLabel)
         view.addSubview(summaryLabel)
         view.addSubview(progressView)
         view.addSubview(upcomingWorkoutsLabel)
-        view.addSubview(upcomingWorkoutsTableView)
-        
-        upcomingWorkoutsTableView.dataSource = self
+        view.addSubview(upcomingWorkoutsCollectionView)
 
-         setupConstraints()
-     
-        let hamburgerButton = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3"), style: .plain, target: self, action: #selector(openMenu))
-            navigationItem.leftBarButtonItem = hamburgerButton
+        upcomingWorkoutsCollectionView.dataSource = self
+        upcomingWorkoutsCollectionView.delegate = self
+        upcomingWorkoutsCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        upcomingWorkoutsCollectionView.backgroundColor = .clear
+        upcomingWorkoutsCollectionView.showsVerticalScrollIndicator = false
+        upcomingWorkoutsCollectionView.translatesAutoresizingMaskIntoConstraints = false
 
-            menuViewController = MenuViewController()
-            addChild(menuViewController!)
-            menuViewController!.view.frame = view.bounds
-            view.addSubview(menuViewController!.view)
-            menuViewController!.didMove(toParent: self)
-
-            // Hide the menu initially
-            menuViewController?.view.frame.origin.x = -view.frame.width
-            menuViewController?.delegate = self
+        setupConstraints()
     }
-    
+
     private func setupConstraints() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         summaryLabel.translatesAutoresizingMaskIntoConstraints = false
         progressView.translatesAutoresizingMaskIntoConstraints = false
         upcomingWorkoutsLabel.translatesAutoresizingMaskIntoConstraints = false
-//        upcomingWorkoutsTableView.translatesAutoresizingMaskIntoConstraints = false
-        
+        upcomingWorkoutsCollectionView.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
+            
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            
+
             summaryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
             summaryLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             summaryLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            
-            progressView.topAnchor.constraint(equalTo: summaryLabel.bottomAnchor, constant: 32),
+
+            progressView.topAnchor.constraint(equalTo: summaryLabel.bottomAnchor, constant: 8),
             progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            
+
             upcomingWorkoutsLabel.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 32),
             upcomingWorkoutsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            
-//            upcomingWorkoutsTableView.topAnchor.constraint(equalTo: upcomingWorkoutsLabel.bottomAnchor, constant: 16),
-//            upcomingWorkoutsTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            upcomingWorkoutsTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            upcomingWorkoutsTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+
+            upcomingWorkoutsCollectionView.topAnchor.constraint(equalTo: upcomingWorkoutsLabel.bottomAnchor, constant: 16),
+            upcomingWorkoutsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            upcomingWorkoutsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            upcomingWorkoutsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-    @objc private func openMenu() {
-        UIView.animate(withDuration: 0.3) {
-            if self.menuViewController?.view.frame.origin.x == -self.view.frame.width {
-                // Show the menu
-                self.menuViewController?.view.frame.origin.x = 0
-            } else {
-                // Hide the menu
-                self.menuViewController?.view.frame.origin.x = -self.view.frame.width
-            }
-        }
+
+    // MARK: - MenuViewControllerDelegate
+
+    func didSelectMenuItem(_ menuItem: String) {
+        // Handle menu item selection here
+        print("Selected menu item: \(menuItem)")
     }
-    
-    
-    func menuViewControllerDidSelectOption(_ option: MenuOption) {
-          // Handle option selection
-          switch option {
-          case .home:
-              // Navigate to Home screen
-              let homeViewController = HomeController()
-              let navigationController = UINavigationController(rootViewController: homeViewController)
-              navigationController.modalPresentationStyle = .fullScreen
-              self.present(navigationController, animated: true, completion: nil)
-              
-              break
-          case .profile:
-              // Navigate to Profile screen
-              break
-          case .settings:
-              // Navigate to Settings screen
-              break
-          default:
-              break
-          }
-      }
-      
-      func menuViewControllerDidSelectLogout() {
-          // Handle logout action
-          // show a confirmation alert and sign out the user if confirmed
-          let alert = UIAlertController(title: "Logout", message: "Are you sure you want to log out?", preferredStyle: .alert)
-          let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-          let confirmAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
-              // Sign out the user
-              
-          // Redirect to the login screen
-          let loginViewController = LoginController()
-          let navigationController = UINavigationController(rootViewController: loginViewController)
-          navigationController.modalPresentationStyle = .fullScreen
-          self.present(navigationController, animated: true, completion: nil)
-      }
-          alert.addAction(cancelAction)
-          alert.addAction(confirmAction)
-          present(alert, animated: true, completion: nil)
-      }
-  }
+}
 
+extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return upcomingWorkouts.count
+    }
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        cell.backgroundColor = .systemYellow
 
+        // Configure the card view appearance
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
 
-extension HomeController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return upcomingWorkouts.count
-  }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = upcomingWorkouts[indexPath.row]
+        // Add labels to display the workout details
+        let workoutTitleLabel = UILabel(frame: CGRect(x: 8, y: 8, width: cell.bounds.width - 16, height: 20))
+        workoutTitleLabel.text = upcomingWorkouts[indexPath.item].0
+        workoutTitleLabel.textAlignment = .center
+        workoutTitleLabel.textColor = .black
+        workoutTitleLabel.font = .systemFont(ofSize: 16)
+        workoutTitleLabel.numberOfLines = 0
+        cell.contentView.addSubview(workoutTitleLabel)
+
+        let workoutTimeLabel = UILabel(frame: CGRect(x: 8, y: workoutTitleLabel.frame.maxY + 4, width: cell.bounds.width - 16, height: 16))
+        workoutTimeLabel.text = upcomingWorkouts[indexPath.item].1
+        workoutTimeLabel.textAlignment = .center
+        workoutTimeLabel.textColor = .gray
+        workoutTimeLabel.font = .systemFont(ofSize: 14)
+        workoutTimeLabel.numberOfLines = 0
+        cell.contentView.addSubview(workoutTimeLabel)
+
+        let progressLabel = UILabel(frame: CGRect(x: 8, y: workoutTimeLabel.frame.maxY + 4, width: cell.bounds.width - 16, height: 16))
+        progressLabel.text = upcomingWorkouts[indexPath.item].2
+        progressLabel.textAlignment = .center
+        progressLabel.textColor = .systemBlue
+        progressLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+        progressLabel.numberOfLines = 0
+        cell.contentView.addSubview(progressLabel)
+
+        // Add a progress view inside the card
+        let progressView = UIProgressView(progressViewStyle: .default)
+        progressView.progressTintColor = .systemGreen
+        progressView.trackTintColor = .systemGray
+        progressView.progress = 0.7 // Set the progress value as desired
+        progressView.frame = CGRect(x: 8, y: progressLabel.frame.maxY + 8, width: cell.bounds.width - 16, height: 10)
+        cell.contentView.addSubview(progressView)
+
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cardWidth = view.frame.width - 32
+        let cardHeight: CGFloat = 120 // Adjust the height as desired
+        return CGSize(width: cardWidth, height: cardHeight)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
 }

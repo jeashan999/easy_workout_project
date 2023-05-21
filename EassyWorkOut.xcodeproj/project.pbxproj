@@ -10,6 +10,7 @@
 		A74DFFE929C2232F0041DCCC /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */; };
 		A75AD4F92A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD4F82A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift */; };
 		A75AD4FB2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD4FA2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift */; };
+		A75AD4FD2A19F7DC0008B3CC /* SmallCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD4FC2A19F7DC0008B3CC /* SmallCardTableViewCell.swift */; };
 		A77481352A097BBF00ED3238 /* ExerciseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */; };
 		A77481372A0C0A0400ED3238 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481362A0C0A0400ED3238 /* MenuViewController.swift */; };
 		A77481392A10B74500ED3238 /* MainTabVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481382A10B74500ED3238 /* MainTabVIewController.swift */; };
@@ -68,6 +69,7 @@
 		A74DFFE829C2232F0041DCCC /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		A75AD4F82A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatagoriesWorkoutListViewController.swift; sourceTree = "<group>"; };
 		A75AD4FA2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleWorkoutDetailsViewController.swift; sourceTree = "<group>"; };
+		A75AD4FC2A19F7DC0008B3CC /* SmallCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SmallCardTableViewCell.swift; path = EassyWorkOut/Controllers/SmallCardTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		A77481342A097BBF00ED3238 /* ExerciseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsViewController.swift; sourceTree = "<group>"; };
 		A77481362A0C0A0400ED3238 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A77481382A10B74500ED3238 /* MainTabVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVIewController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				A77481472A13E8B000ED3238 /* HeroHeaderUIView.swift */,
 				A774814F2A15397600ED3238 /* FitnessGoalCardView.swift */,
 				A788DC7F2A178A5D00EC982F /* WorkoutProgressView.swift */,
+				A75AD4FC2A19F7DC0008B3CC /* SmallCardTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				A79E158C29CF487E00E33679 /* NewSplashScreenController.swift in Sources */,
 				A77481522A15505F00ED3238 /* HeightSelectViewController.swift in Sources */,
 				B37FE3A729BD93ED00D0B50C /* LoginController.swift in Sources */,
+				A75AD4FD2A19F7DC0008B3CC /* SmallCardTableViewCell.swift in Sources */,
 				A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */,
 				A77481502A15397600ED3238 /* FitnessGoalCardView.swift in Sources */,
 				A7BA6A4129D0188C009443F6 /* WebViewerController.swift in Sources */,
