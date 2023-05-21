@@ -56,7 +56,6 @@ class WorkoutListViewController: UIViewController {
 
 //        configureNavigationBar()
 
-        // Sample data
         workouts = [
             Workout(title: "Cardio Workout 1", category: "Cardio"),
             Workout(title: "Strength Training 1", category: "Strength Training"),
