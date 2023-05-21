@@ -57,14 +57,14 @@ class WorkoutListViewController: UIViewController {
 //        configureNavigationBar()
 
         workouts = [
-            Workout(title: "Cardio Workout 1", category: "Cardio"),
-            Workout(title: "Strength Training 1", category: "Strength Training"),
-            Workout(title: "Yoga Class 1", category: "Yoga"),
-            Workout(title: "Pilates Class 1", category: "Pilates"),
-            Workout(title: "Cardio Workout 2", category: "Cardio"),
-            Workout(title: "Strength Training 2", category: "Strength Training"),
-            Workout(title: "Yoga Class 2", category: "Yoga"),
-            Workout(title: "Pilates Class 2", category: "Pilates"),
+            Workout(title: "Cardio Workout 1", category: "Cardio", image: UIImage(named: "Cardio1")),
+            Workout(title: "Strength Training 1", category: "Strength Training", image: UIImage(named: "StrengthTraining")),
+            Workout(title: "Yoga Class 1", category: "Yoga", image: UIImage(named: "Yoga1")),
+            Workout(title: "Pilates Class 1", category: "Pilates", image: UIImage(named: "Pilates1")),
+            Workout(title: "Cardio Workout 2", category: "Cardio", image: UIImage(named: "Cardio1")),
+            Workout(title: "Strength Training 2", category: "Strength Training", image: UIImage(named: "StrengthTraining2")),
+            Workout(title: "Yoga Class 2", category: "Yoga", image: UIImage(named: "Yoga2")),
+            Workout(title: "Pilates Class 2", category: "Pilates", image: UIImage(named: "Pilates1")),
         ]
 
         workoutsTableView.reloadData()
@@ -107,7 +107,6 @@ class WorkoutListViewController: UIViewController {
     @objc private func addButtonTapped() {
         // Handle add button tap event
         print("View button tapped")
-        
     }
 
     @objc private func categoriesDropdownTapped() {
@@ -176,10 +175,18 @@ extension WorkoutListViewController: UITableViewDelegate, UITableViewDataSource 
 struct Workout {
     let title: String
     let category: String
+    let image: UIImage?
 }
 
 class WorkoutTableViewCell: UITableViewCell {
     static let identifier = "WorkoutTableViewCell"
+
+    private let workoutImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -207,6 +214,7 @@ class WorkoutTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubview(workoutImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(categoryLabel)
         contentView.addSubview(button)
@@ -219,18 +227,27 @@ class WorkoutTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        titleLabel.frame = CGRect(x: 16, y: 16, width: contentView.frame.width - 32, height: 20)
-        categoryLabel.frame = CGRect(x: 16, y: titleLabel.frame.maxY + 4, width: contentView.frame.width - 32, height: 16)
+        workoutImageView.frame = CGRect(x: 16, y: 16, width: 68, height: 68)
+        titleLabel.frame = CGRect(x: workoutImageView.frame.maxX + 16, y: 16, width: contentView.frame.width - workoutImageView.frame.maxX - 32, height: 20)
+        categoryLabel.frame = CGRect(x: workoutImageView.frame.maxX + 16, y: titleLabel.frame.maxY + 4, width: contentView.frame.width - workoutImageView.frame.maxX - 32, height: 16)
         button.frame = CGRect(x: contentView.frame.width - 56, y: 16, width: 40, height: 20)
     }
 
     func configure(with workout: Workout) {
+        workoutImageView.image = workout.image
         titleLabel.text = workout.title
         categoryLabel.text = workout.category
     }
 
     @objc private func addButtonTapped() {
-       
         addButtonAction?()
     }
 }
+
+//class SingleWorkoutDetailsViewController: UIViewController {
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        view.backgroundColor = .systemBackground
+//        title = "Workout Details"
+//    }
+//}

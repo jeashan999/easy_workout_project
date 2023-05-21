@@ -25,6 +25,8 @@
 		A774814E2A15364400ED3238 /* FitnessGoalSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774814D2A15364400ED3238 /* FitnessGoalSelectController.swift */; };
 		A77481502A15397600ED3238 /* FitnessGoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A774814F2A15397600ED3238 /* FitnessGoalCardView.swift */; };
 		A77481522A15505F00ED3238 /* HeightSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77481512A15505F00ED3238 /* HeightSelectViewController.swift */; };
+		A783FAC52A1A4A9C009B5D65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A783FAC42A1A4A9C009B5D65 /* GoogleService-Info.plist */; };
+		A783FB3F2A1A5A41009B5D65 /* DietPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783FB3E2A1A5A41009B5D65 /* DietPlanTableViewCell.swift */; };
 		A78497DA29C363E100B87FF6 /* TextFeildCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497D929C363E100B87FF6 /* TextFeildCustom.swift */; };
 		A78497DC29C3934400B87FF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78497DB29C3934400B87FF6 /* CustomButton.swift */; };
 		A7889F3429D94C8000EB7418 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7889F3329D94C8000EB7418 /* AlertManager.swift */; };
@@ -84,6 +86,8 @@
 		A774814D2A15364400ED3238 /* FitnessGoalSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessGoalSelectController.swift; sourceTree = "<group>"; };
 		A774814F2A15397600ED3238 /* FitnessGoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FitnessGoalCardView.swift; path = EassyWorkOut/Controllers/FitnessGoalCardView.swift; sourceTree = SOURCE_ROOT; };
 		A77481512A15505F00ED3238 /* HeightSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightSelectViewController.swift; sourceTree = "<group>"; };
+		A783FAC42A1A4A9C009B5D65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A783FB3E2A1A5A41009B5D65 /* DietPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanTableViewCell.swift; sourceTree = "<group>"; };
 		A78497D929C363E100B87FF6 /* TextFeildCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFeildCustom.swift; sourceTree = SOURCE_ROOT; };
 		A78497DB29C3934400B87FF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = SOURCE_ROOT; };
 		A7889F3329D94C8000EB7418 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				A788DC842A18E2B500EC982F /* WorkoutDetailViewController.swift */,
 				A75AD4F82A19E3210008B3CC /* CatagoriesWorkoutListViewController.swift */,
 				A75AD4FA2A19E6700008B3CC /* SingleWorkoutDetailsViewController.swift */,
+				A783FB3E2A1A5A41009B5D65 /* DietPlanTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 		B38DAE6129BC74EC007B9072 /* EassyWorkOut */ = {
 			isa = PBXGroup;
 			children = (
+				A783FAC42A1A4A9C009B5D65 /* GoogleService-Info.plist */,
 				A788DC812A17D59200EC982F /* Managers */,
 				A77481442A11616000ED3238 /* Models */,
 				B37FE3A129BD90EA00D0B50C /* Views */,
@@ -362,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FC2E4229C61DA000043CE4 /* gymVideo.mp4 in Resources */,
+				A783FAC52A1A4A9C009B5D65 /* GoogleService-Info.plist in Resources */,
 				B38DAE6F29BC74F1007B9072 /* LaunchScreen.storyboard in Resources */,
 				B38DAE6C29BC74F1007B9072 /* Assets.xcassets in Resources */,
 			);
@@ -388,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A783FB3F2A1A5A41009B5D65 /* DietPlanTableViewCell.swift in Sources */,
 				A774814A2A15288900ED3238 /* AgeSelectViewController.swift in Sources */,
 				A774813D2A11203E00ED3238 /* CreateScheduleController.swift in Sources */,
 				B37FE3A529BD93C900D0B50C /* ForgetController.swift in Sources */,

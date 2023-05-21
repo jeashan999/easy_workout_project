@@ -38,12 +38,20 @@ class ScheduleTableViewCell: UITableViewCell {
         return label
     }()
     
+    private let scheduleImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(cardView)
         cardView.addSubview(titleLabel)
         cardView.addSubview(timeLabel)
         cardView.addSubview(locationLabel)
+        cardView.addSubview(scheduleImageView)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -58,12 +66,14 @@ class ScheduleTableViewCell: UITableViewCell {
         titleLabel.frame = CGRect(x: 16, y: 16, width: cardView.frame.width - 32, height: 20)
         timeLabel.frame = CGRect(x: 16, y: titleLabel.frame.maxY + 4, width: cardView.frame.width - 32, height: 16)
         locationLabel.frame = CGRect(x: 16, y: timeLabel.frame.maxY + 4, width: cardView.frame.width - 32, height: 16)
+        scheduleImageView.frame = CGRect(x: cardView.frame.width - 80, y: 8, width: 64, height: 64)
     }
     
     func configure(with schedule: Schedule) {
         titleLabel.text = schedule.title
         timeLabel.text = "Date & Time: \(schedule.datetime)"
         locationLabel.text = "Location: \(schedule.location)"
+        scheduleImageView.image = schedule.image
     }
 }
 
@@ -71,6 +81,7 @@ struct Schedule {
     let title: String
     let datetime: String
     let location: String
+    let image: UIImage?
 }
 
 class ScheduleViewController: UIViewController {
@@ -83,19 +94,10 @@ class ScheduleViewController: UIViewController {
     }()
     
     private var schedules: [Schedule] = [
-        Schedule(title: "Yoga Class", datetime: "2023-05-20 10:00 AM", location: "Studio A"),
-        Schedule(title: "Weightlifting", datetime: "2023-05-20 10:00 AM ", location: "Gym Floor"),
-        Schedule(title: "Cardio Workout", datetime: "2023-05-20 10:00 AM", location: "Cardio Area"),
-        Schedule(title: "Sample Schedule 1", datetime: "2023-05-21 2:00 PM", location: "Location 1"),
-        Schedule(title: "Sample Schedule 2", datetime: "2023-05-22 4:30 PM", location: "Location 2"),
-        Schedule(title: "Sample Schedule 3", datetime: "2023-05-23 9:30 AM", location: "Location 3"),
-        Schedule(title: "Sample Schedule 4", datetime: "2023-05-24 6:00 PM", location: "Location 4"),
-        Schedule(title: "Sample Schedule 5", datetime: "2023-05-25 11:00 AM", location: "Location 5"),
-        Schedule(title: "Sample Schedule 6", datetime: "2023-05-26 3:30 PM", location: "Location 6"),
-        Schedule(title: "Sample Schedule 7", datetime: "2023-05-27 8:30 AM", location: "Location 7"),
-        Schedule(title: "Sample Schedule 8", datetime: "2023-05-28 5:00 PM", location: "Location 8"),
-        Schedule(title: "Sample Schedule 9", datetime: "2023-05-29 10:30 AM", location: "Location 9"),
-        Schedule(title: "Sample Schedule 10", datetime: "2023-05-30 1:30 PM", location: "Location 10")
+        Schedule(title: "Yoga Class", datetime: "2023-05-20 10:00 AM", location: "Studio A", image: UIImage(named: "Yoga2")),
+        Schedule(title: "Weightlifting", datetime: "2023-05-20 10:00 AM", location: "Gym Floor", image: UIImage(named: "weightlifting_image")),
+        Schedule(title: "Cardio Workout", datetime: "2023-05-20 10:00 AM", location: "Cardio Area" , image: UIImage(named: "Cardio_image")),
+       
     ]
     
     override func viewDidLoad() {
@@ -167,35 +169,3 @@ extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
         present(alertController, animated: true, completion: nil)
     }
 }
-
-class NewViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        
-        let titleLabel = UILabel()
-        titleLabel.text = "New Controller"
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        titleLabel.textColor = .label
-        titleLabel.textAlignment = .center
-        titleLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-        titleLabel.center = view.center
-        view.addSubview(titleLabel)
-    }
-}
-
-//class CreateScheduleController: UIViewController {
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        view.backgroundColor = .systemBackground
-//
-//        let titleLabel = UILabel()
-//        titleLabel.text = "Create Schedule"
-//        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-//        titleLabel.textColor = .label
-//        titleLabel.textAlignment = .center
-//        titleLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-//        titleLabel.center = view.center
-//        view.addSubview(titleLabel)
-//    }
-//}

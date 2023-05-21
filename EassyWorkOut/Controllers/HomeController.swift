@@ -12,8 +12,9 @@ class HomeController: UIViewController {
     private var menuViewController: MenuViewController?
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Easy Workout Dashboard"
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.text = "Hi Jeashan Welcome Back!"
+        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.textColor = .systemTeal
         label.textAlignment = .center
         return label
     }()
@@ -28,9 +29,9 @@ class HomeController: UIViewController {
 
     private let progressView: UIProgressView = {
         let progressView = UIProgressView(progressViewStyle: .default)
-        progressView.progressTintColor = .systemIndigo
-        progressView.trackTintColor = .systemGray
-        progressView.progress = 0.9 // Set the progress value as desired
+        progressView.progressTintColor = .systemRed
+        progressView.trackTintColor = .systemGreen
+        progressView.progress = 0.5
         return progressView
     }()
 
@@ -88,7 +89,6 @@ class HomeController: UIViewController {
         upcomingWorkoutsCollectionView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
@@ -133,15 +133,15 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFl
         cell.layer.masksToBounds = true
 
         // Add labels to display the workout details
-        let workoutTitleLabel = UILabel(frame: CGRect(x: 8, y: 8, width: cell.bounds.width - 16, height: 20))
+        let workoutTitleLabel = UILabel(frame: CGRect(x: 16, y: 16, width: cell.bounds.width - 32, height: 20))
         workoutTitleLabel.text = upcomingWorkouts[indexPath.item].0
         workoutTitleLabel.textAlignment = .center
         workoutTitleLabel.textColor = .black
-        workoutTitleLabel.font = .systemFont(ofSize: 16)
+        workoutTitleLabel.font = .systemFont(ofSize: 16, weight: .semibold)
         workoutTitleLabel.numberOfLines = 0
         cell.contentView.addSubview(workoutTitleLabel)
 
-        let workoutTimeLabel = UILabel(frame: CGRect(x: 8, y: workoutTitleLabel.frame.maxY + 4, width: cell.bounds.width - 16, height: 16))
+        let workoutTimeLabel = UILabel(frame: CGRect(x: 16, y: workoutTitleLabel.frame.maxY + 8, width: cell.bounds.width - 32, height: 16))
         workoutTimeLabel.text = upcomingWorkouts[indexPath.item].1
         workoutTimeLabel.textAlignment = .center
         workoutTimeLabel.textColor = .gray
@@ -149,7 +149,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFl
         workoutTimeLabel.numberOfLines = 0
         cell.contentView.addSubview(workoutTimeLabel)
 
-        let progressLabel = UILabel(frame: CGRect(x: 8, y: workoutTimeLabel.frame.maxY + 4, width: cell.bounds.width - 16, height: 16))
+        let progressLabel = UILabel(frame: CGRect(x: 16, y: workoutTimeLabel.frame.maxY + 8, width: cell.bounds.width - 32, height: 16))
         progressLabel.text = upcomingWorkouts[indexPath.item].2
         progressLabel.textAlignment = .center
         progressLabel.textColor = .systemBlue
@@ -162,7 +162,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFl
         progressView.progressTintColor = .systemGreen
         progressView.trackTintColor = .systemGray
         progressView.progress = 0.7 // Set the progress value as desired
-        progressView.frame = CGRect(x: 8, y: progressLabel.frame.maxY + 8, width: cell.bounds.width - 16, height: 10)
+        progressView.frame = CGRect(x: 16, y: progressLabel.frame.maxY + 8, width: cell.bounds.width - 32, height: 10)
         cell.contentView.addSubview(progressView)
 
         return cell

@@ -16,21 +16,24 @@ class MainTabVIewController: UITabBarController {
         let vc1 = UINavigationController(rootViewController: HomeController())
         let vc2 = UINavigationController(rootViewController: ScheduleViewController())
         let vc3 = UINavigationController(rootViewController: WorkoutListViewController())
-        let vc4 = UINavigationController(rootViewController: ProfileController())
+        let vc5 = UINavigationController(rootViewController: ProfileController())
+        let vc4 = UINavigationController(rootViewController: DietPlanViewController())
         
         vc1.tabBarItem.image = UIImage(systemName: "house.fill")
         vc2.tabBarItem.image = UIImage(systemName: "chart.bar.doc.horizontal.fill")
         vc3.tabBarItem.image = UIImage(systemName: "figure.run.circle.fill")
-        vc4.tabBarItem.image = UIImage(systemName: "person.circle.fill")
+        vc4.tabBarItem.image = UIImage(systemName: "fork.knife.circle")
+        vc5.tabBarItem.image = UIImage(systemName: "person.circle.fill")
         
         vc1.title = "Home"
         vc2.title = "View Schedule"
         vc3.title = "Workout Search"
-        vc4.title = "Profile"
+        vc5.title = "Profile"
+        vc4.title = "Diet Plans"
         
         tabBar.tintColor = .label
         
-        setViewControllers([vc1,vc2,vc3,vc4], animated: true)
+        setViewControllers([vc1,vc2,vc3,vc4,vc5], animated: true)
     }
     
 
